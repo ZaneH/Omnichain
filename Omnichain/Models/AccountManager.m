@@ -23,20 +23,36 @@
 }
 
 - (void)signUpWithUsername:(NSString *)username password:(NSString *)password success:(void (^)())successBlock failure:(void (^)(OMChainWallet *wallet, NSString *error))failureBlock {
+	if ([username isEqualToString:@""] || [password isEqualToString:@""]) {
+		failureBlock(nil, @"One or more fields have been left empty.");
+		return;
+	}
+	
 	[[OMChainWallet alloc] registerAccountWithUsername:username
 											  password:password
 											   success:^{
 												   successBlock();
 											   } failed:^(OMChainWallet *wallet, NSString *error) {
+												   if ([error isEqualToString:@"USERNAME_TAKEN"]) {
+													   error = @"This username has already been taken.";
+												   }
 												   failureBlock(wallet, error);
 											   }];
 }
 
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password success:(void (^)())successBlock failure:(void (^)(OMChainWallet *wallet, NSString *error))failureBlock {
+	if ([username isEqualToString:@""] || [password isEqualToString:@""]) {
+		failureBlock(nil, @"One or more fields have been left empty.");
+		return;
+	}
+	
 	userWallet = [[OMChainWallet alloc] initWithUsername:username password:password];
 	[userWallet attemptSignInWithSuccess:^{
 		successBlock();
 	} failed:^(OMChainWallet *wallet, NSString *error) {
+		if ([error isEqualToString:@"BAD_LOGIN"]) {
+			error = @"Username or password is incorrect.";
+		}
 		failureBlock(wallet, error);
 	}];
 }

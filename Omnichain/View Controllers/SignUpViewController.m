@@ -116,6 +116,7 @@
 												} failure:^(OMChainWallet *wallet, NSString *error) {
 													[indicator stopAnimating];
 													[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+													
 													UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Registration Error" message:error preferredStyle:UIAlertControllerStyleAlert];
 													UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 														[errorController dismissViewControllerAnimated:YES completion:nil];
@@ -128,10 +129,6 @@
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 	[[AccountManager sharedInstance] stopCurrentRequest];
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-	return UIStatusBarStyleLightContent;
 }
 
 @end

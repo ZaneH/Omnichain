@@ -96,6 +96,7 @@
 											   } failure:^(OMChainWallet *wallet, NSString *error) {
 												   [indicator stopAnimating];
 												   [loginButton setTitle:@"Login" forState:UIControlStateNormal];
+												   
 												   UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Sign In Error" message:error preferredStyle:UIAlertControllerStyleAlert];
 												   UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 													   [errorController dismissViewControllerAnimated:YES completion:nil];
@@ -108,10 +109,6 @@
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 	[[AccountManager sharedInstance] stopCurrentRequest];
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-	return UIStatusBarStyleLightContent;
 }
 
 @end

@@ -44,6 +44,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-2q-Ri1">
                                 <rect key="frame" x="20" y="492" width="560" height="40"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" label="Sign up"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="6Va-1v-Xpv"/>
                                 </constraints>
@@ -55,6 +56,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZQ-ff-hCs">
                                 <rect key="frame" x="20" y="540" width="560" height="40"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" label="Login"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="uFq-UR-pnd"/>
                                 </constraints>
@@ -108,6 +110,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgI-qG-MJ3">
                                 <rect key="frame" x="20" y="72" width="560" height="45"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" label="Login user name"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Zor-xa-KhR"/>
                                 </constraints>
@@ -118,6 +121,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0R-JZ-xfs">
                                 <rect key="frame" x="20" y="202" width="560" height="40"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" label="Login">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="diO-3h-1as"/>
                                 </constraints>
@@ -129,6 +135,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGG-cN-7Xy">
                                 <rect key="frame" x="20" y="125" width="560" height="45"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" label="Login password"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="6Bn-ch-m43"/>
                                 </constraints>
@@ -176,6 +183,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNF-Hi-5nM">
                                 <rect key="frame" x="20" y="72" width="560" height="45"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" label="Sign up user name"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="d0e-zQ-syU"/>
                                 </constraints>
@@ -186,6 +194,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7b-b8-Z49">
                                 <rect key="frame" x="20" y="125" width="560" height="45"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" label="Sign up password"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Bgi-nH-T1V"/>
                                 </constraints>
@@ -207,6 +216,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm your password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jlu-8v-g2L">
                                 <rect key="frame" x="20" y="178" width="560" height="45"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" label="Sign up confirm password"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="nSA-Hb-Yt3"/>
                                 </constraints>

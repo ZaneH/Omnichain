@@ -44,8 +44,4 @@
 	[loginButton setTitleColor:[UIColor mainPurpleColor] forState:UIControlStateNormal];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-	return UIStatusBarStyleLightContent;
-}
-
 @end
