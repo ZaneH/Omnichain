@@ -2,7 +2,7 @@ PODS:
   - KIF (3.3.0):
     - KIF/Core (= 3.3.0)
   - KIF/Core (3.3.0)
-  - OMChainKit (1.2.1)
+  - OMChainKit (1.2.6)
 
 DEPENDENCIES:
   - KIF (~> 3.0)
@@ -10,6 +10,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   KIF: 0a82046d06f3648799cac522d2d0f7934214caac
-  OMChainKit: e9061874dbee4a67abc8372728a43c901a996b1a
+  OMChainKit: 7b2fafb1915188658c98666599c2e2230290461b
 
 COCOAPODS: 0.38.2

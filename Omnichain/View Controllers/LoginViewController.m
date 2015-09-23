@@ -84,25 +84,23 @@
 	[self login];
 }
 
-- (IBAction)cancelButtonTapped:(UIButton *)sender {
-	[self dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (void)login {
 	[loginButton setTitle:@"" forState:UIControlStateNormal];
 	[loginButton addSubview:indicator];
 	[indicator setHidesWhenStopped:YES];
 	[indicator startAnimating];
 	
-	if ([[AccountManager sharedInstance] loginWithUsername:usernameTextField.text password:passwordTextField.text]) {
+	NSString *error = [[AccountManager sharedInstance] loginWithUsername:usernameTextField.text password:passwordTextField.text];
+	if (!error) {
+		// if there's nothing inside the return value, it passed.
 		[indicator stopAnimating];
 		[loginButton setTitle:@"Login" forState:UIControlStateNormal];
-		NSLog(@"Successfully logged in.");
 		// TODO: Take to wallets view
 	} else {
+		// otherwise, it returned the error as a string.
 		[indicator stopAnimating];
 		[loginButton setTitle:@"Login" forState:UIControlStateNormal];
-		UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Sign In Error" message:@"Your username or password is incorrect." preferredStyle:UIAlertControllerStyleAlert];
+		UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Sign In Error" message:error preferredStyle:UIAlertControllerStyleAlert];
 		UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 			[errorController dismissViewControllerAnimated:YES completion:nil];
 		}];

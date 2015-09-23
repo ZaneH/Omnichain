@@ -116,8 +116,8 @@
 		2F8E97291BB24A1A00C82D0A /* Omnichain */ = {
 			isa = PBXGroup;
 			children = (
-				2FA4E0551BB27BEE00A5166C /* Models */,
 				2FA4E0491BB2649F00A5166C /* App Delegate */,
+				2FA4E0551BB27BEE00A5166C /* Models */,
 				2FA4E04A1BB264A700A5166C /* View Controllers */,
 				2FA4E0541BB27BE600A5166C /* Storyboards */,
 				2F8E972A1BB24A1A00C82D0A /* Supporting Files */,

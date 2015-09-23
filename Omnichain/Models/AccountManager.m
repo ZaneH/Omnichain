@@ -22,31 +22,38 @@
 	return _sharedInstance;
 }
 
-- (BOOL)signUpWithUsername:(NSString *)username password:(NSString *)password {
-	__block BOOL success;
+- (NSString *)signUpWithUsername:(NSString *)username password:(NSString *)password {
+	__block NSString *_error = nil;
 	[[OMChainWallet alloc] registerAccountWithUsername:username
 											  password:password
 											   success:^{
-												   success = YES;
+												   // there is no error, leave it nil
 											   } failed:^(OMChainWallet *wallet, NSString *error) {
-												   success = NO;
+												   // there is an error, set `_error` equal to the error
+												   _error = error;
 											   }];
 	
-	return success;
+	return _error;
 }
 
-- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password {
-	__block BOOL success;
+- (NSString *)loginWithUsername:(NSString *)username password:(NSString *)password {
+	__block NSString *_error = nil;
 	userWallet = [[OMChainWallet alloc] initWithUsername:username
 												password:password
 												 success:^(OMChainWallet *wallet) {
-													 success = YES;
+													 [wallet attemptSignInWithSuccess:^{
+														 // until this method is called, not much is made of the wallet
+														 [userWallet refreshWalletInfo];
+													 } failed:^(OMChainWallet *wallet, NSString *error) {
+														 // there is an error, set `_error` equal to the error
+														 _error = error;
+													 }];
 												 } failure:^(OMChainWallet *wallet, NSString *error) {
-													 success = NO;
-													 NSLog(@"%@", error);
+													 // there is an error, set `_error` equal to the error
+													 _error = error;
 												 }];
 	
-	return success;
+	return _error;
 }
 
 @end

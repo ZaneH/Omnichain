@@ -50,9 +50,6 @@
 		_timeOutInterval = 60;
 		_successBlock = successBlock;
 		_failedBlock = failureBlock;
-		[self createAPIRequestWithMethod:@"wallet_login"
-								  params:@{@"username":self.username,
-										   @"password":self.passwordHash}];
 	}
 	return self;
 }
@@ -77,8 +74,6 @@
 	return self;
 }
 
-#pragma mark -
-
 #pragma mark - Get Info Methods
 
 - (void)refreshWalletInfo {
@@ -86,8 +81,6 @@
 							  params:@{@"username":self.username,
 									   @"password":self.sessionToken}];
 }
-
-#pragma mark -
 
 #pragma mark - Configuration Methods
 
@@ -164,9 +157,15 @@
 									   @"difficulty":[NSNumber numberWithDouble:difficulty]}];
 }
 
-#pragma mark -
-
 #pragma mark - API Interaction Methods
+
+- (void)attemptSignInWithSuccess:(void (^)())successBlock failed:(void (^)(OMChainWallet *, NSString *))failureBlock {
+	_successBlock = successBlock;
+	_failedBlock = failureBlock;
+	[self createAPIRequestWithMethod:@"wallet_login"
+							  params:@{@"username":self.username,
+									   @"password":self.passwordHash}];
+}
 
 - (void)registerAccountWithUsername:(NSString *)username password:(NSString *)password success:(void (^)())successBlock failed:(void (^)(OMChainWallet *wallet, NSString *error))failureBlock {
 	[self registerAccountWithUsername:username password:password confirmPassword:password success:successBlock failed:failureBlock];
@@ -202,12 +201,11 @@
 	
 	// client-side checking
 	if ([password isEqualToString:@""] || [confirmPassword isEqualToString:@""]) {
-		[self.delegate omnichainFailedWithWallet:self error:@"EMPTY_REQUIRED_FIELDS"];
-		failureBlock(self, @"EMPTY_REQUIRED_FIELDS");
+		if (failureBlock) failureBlock(self, @"EMPTY_REQUIRED_FIELDS");
 		return;
 	}
 	if (![password isEqualToString:confirmPassword]) {
-		failureBlock(self, @"NONMATCHING_PASSWORDS");
+		if (failureBlock) failureBlock(self, @"NONMATCHING_PASSWORDS");
 		return;
 	}
 	
@@ -257,8 +255,6 @@
 									   @"password":self.sessionToken}];
 }
 
-#pragma mark -
-
 #pragma mark - Helper Methods
 
 - (NSString *)createSHA512WithString:(NSString *)source {
@@ -287,10 +283,8 @@
 											  cachePolicy:NSURLRequestUseProtocolCachePolicy
 											  timeoutInterval:_timeOutInterval];
 	[callMethodRequest setHTTPMethod:@"GET"];
-	__unused NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:callMethodRequest delegate:self];
+	[NSURLConnection connectionWithRequest:callMethodRequest delegate:self];
 }
-
-#pragma mark -
 
 #pragma mark - NSURLConnection Delegate Methods
 
@@ -304,14 +298,14 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_failedBlock(self, [jsonObject valueForKey:@"error_info"]);
+				if (_failedBlock) _failedBlock(self, [jsonObject valueForKey:@"error_info"]);
 				[self.delegate omnichainFailedWithWallet:self error:@"wallet_login"];
 				return;
 			}
 			self.sessionToken = [[jsonObject valueForKey:@"response"] valueForKey:@"session"];
 			self.version = [jsonObject valueForKey:@"version"];
 		} else {
-			_failedBlock(self, @"API_CHANGED");
+			if (_failedBlock) _failedBlock(self, @"API_CHANGED");
 			[self.delegate omnichainFailedWithWallet:self error:@"wallet_login"];
 			return;
 		}
@@ -328,7 +322,7 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_failedBlock(self, [jsonObject valueForKey:@"error_info"]);
+				if (_failedBlock) _failedBlock(self, [jsonObject valueForKey:@"error_info"]);
 				return;
 			}
 			self.emailAddress = [jsonObject valueForKey:@"email"];
@@ -361,11 +355,11 @@
 			
 			self.omcUSDValue = [[jsonObject valueForKey:@"omc_usd_price"] doubleValue];
 		} else {
-			_failedBlock(self, @"API_CHANGED");
+			if (_failedBlock) _failedBlock(self, @"API_CHANGED");
 			[self.delegate omnichainFailedWithWallet:self error:@"wallet_getinfo"];
 			return;
 		}
-		_successBlock(self);
+		if (_successBlock) _successBlock(self);
 		return;
 	}
 	
@@ -378,15 +372,15 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_failedBlock(self, [jsonObject valueForKey:@"error_info"]);
+				if (_failedBlock) _failedBlock(self, [jsonObject valueForKey:@"error_info"]);
 				return;
 			}
 		} else {
-			_failedBlock(self, @"API_CHANGED");
+			if (_failedBlock) _failedBlock(self, @"API_CHANGED");
 			[self.delegate omnichainFailedWithWallet:self error:@"API_CHANGED"];
 			return;
 		}
-		_registerSuccessBlock();
+		if (_registerSuccessBlock) _registerSuccessBlock();
 		return;
 	}
 	
@@ -399,17 +393,17 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_failedBlock(self, [jsonObject valueForKey:@"error_info"]);
+				if (_failedBlock) _failedBlock(self, [jsonObject valueForKey:@"error_info"]);
 				return;
 			}
 			// if there's an error don't update the email, otherwise do update the email address
 			self.emailAddress = _potentialEmail;
 		} else {
-			_failedBlock(self, @"API_CHANGED");
+			if (_failedBlock) _failedBlock(self, @"API_CHANGED");
 			[self.delegate omnichainFailedWithWallet:self error:@"wallet_changeemail"];
 			return;
 		}
-		_changeEmailSuccessBlock();
+		if (_changeEmailSuccessBlock) _changeEmailSuccessBlock();
 		return;
 	}
 	
@@ -422,17 +416,17 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_failedBlock(self, [jsonObject valueForKey:@"error_info"]);
+				if (_failedBlock) _failedBlock(self, [jsonObject valueForKey:@"error_info"]);
 				return;
 			}
 			// if there's an error don't update the password, otherwise do update the password
 			self.passwordHash = _potentialPassword;
 		} else {
-			_failedBlock(self, @"API_CHANGED");
+			if (_failedBlock) _failedBlock(self, @"API_CHANGED");
 			[self.delegate omnichainFailedWithWallet:self error:@"changepassword"];
 			return;
 		}
-		_changePasswordSuccessBlock();
+		if (_changePasswordSuccessBlock) _changePasswordSuccessBlock();
 		return;
 	}
 	
@@ -445,18 +439,19 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_failedBlock(self, [jsonObject valueForKey:@"error_info"]);
+				if (_failedBlock) _failedBlock(self, [jsonObject valueForKey:@"error_info"]);
 				return;
 			}
 		} else {
-			_failedBlock(self, @"API_CHANGED");
+			if (_failedBlock) _failedBlock(self, @"API_CHANGED");
 			[self.delegate omnichainFailedWithWallet:self error:@"wallet_signmessage"];
 			return;
 		}
-		_signMessageSuccessBlock(_tempAddress, _tempMessage, [[jsonObject valueForKey:@"response"] valueForKey:@"signature"]);
+		if (_signMessageSuccessBlock) _signMessageSuccessBlock(_tempAddress, _tempMessage, [[jsonObject valueForKey:@"response"] valueForKey:@"signature"]);
 		return;
 	}
 	
+	// Disabled for now (not my decision)
 	/*methodSubString = connection.currentRequest.URL.query.length >= 23 ? [connection.currentRequest.URL.query substringWithRange:NSMakeRange(0, 23)] : @"";
 	// imports a previously generated address into Omnicha.in
 	if ([methodSubString isEqualToString:@"method=wallet_importkey"]) {
@@ -490,15 +485,15 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_generateAddressSuccessBlock(nil);
+				if (_generateAddressSuccessBlock) _generateAddressSuccessBlock(nil);
 				return;
 			}
 		} else {
-			_generateAddressSuccessBlock(nil);
+			if (_generateAddressSuccessBlock) _generateAddressSuccessBlock(nil);
 			[self.delegate omnichainFailedWithWallet:self error:@"wallet_genaddr"];
 			return;
 		}
-		_generateAddressSuccessBlock([[jsonObject valueForKey:@"response"] valueForKey:@"address"]);
+		if (_generateAddressSuccessBlock) _generateAddressSuccessBlock([[jsonObject valueForKey:@"response"] valueForKey:@"address"]);
 		return;
 	}
 	
@@ -511,7 +506,7 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_getInfoCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
+				if (_getInfoCompleteBlock) _getInfoCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
 				[self.delegate omnichainFailedWithWallet:self error:@"getinfo"];
 				return;
 			}
@@ -526,10 +521,10 @@
 											 @"omc_usd_price":[NSNumber numberWithDouble:[[[jsonObject valueForKey:@"response"] valueForKey:@"omc_usd_price"] doubleValue]],
 											 @"market_cap":[NSNumber numberWithDouble:[[[jsonObject valueForKey:@"response"] valueForKey:@"market_cap"] doubleValue]],
 											 @"block_reward":[NSNumber numberWithDouble:[[[jsonObject valueForKey:@"response"] valueForKey:@"block_reward"] doubleValue]]};
-			_getInfoCompleteBlock(infoDictionary, nil);
+			if (_getInfoCompleteBlock) _getInfoCompleteBlock(infoDictionary, nil);
 			return;
 		} else {
-			_getInfoCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
+			if (_getInfoCompleteBlock) _getInfoCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
 			[self.delegate omnichainFailedWithWallet:self error:@"getinfo"];
 			return;
 		}
@@ -546,14 +541,14 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_getBalanceCompleteBlock(nil, 0, [jsonObject valueForKey:@"error_info"]);
+				if (_getBalanceCompleteBlock) _getBalanceCompleteBlock(nil, 0, [jsonObject valueForKey:@"error_info"]);
 				[self.delegate omnichainFailedWithWallet:self error:@"getbalance"];
 				return;
 			}
-			_getBalanceCompleteBlock(_tempAddress, [[[jsonObject valueForKey:@"response"] valueForKey:@"balance"] doubleValue], nil);
+			if (_getBalanceCompleteBlock) _getBalanceCompleteBlock(_tempAddress, [[[jsonObject valueForKey:@"response"] valueForKey:@"balance"] doubleValue], nil);
 			return;
 		} else {
-			_getBalanceCompleteBlock(nil, 0, [jsonObject valueForKey:@"error_info"]);
+			if (_getBalanceCompleteBlock) _getBalanceCompleteBlock(nil, 0, [jsonObject valueForKey:@"error_info"]);
 			[self.delegate omnichainFailedWithWallet:self error:@"getbalance"];
 			return;
 		}
@@ -570,14 +565,14 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_isValidAddressCompleteBlock(nil, 0, [jsonObject valueForKey:@"error_info"]);
+				if (_isValidAddressCompleteBlock) _isValidAddressCompleteBlock(nil, 0, [jsonObject valueForKey:@"error_info"]);
 				[self.delegate omnichainFailedWithWallet:self error:@"checkaddress"];
 				return;
 			}
-			_isValidAddressCompleteBlock(_tempAddress, [[[jsonObject valueForKey:@"response"] valueForKey:@"isvalid"] boolValue], nil);
+			if (_isValidAddressCompleteBlock) _isValidAddressCompleteBlock(_tempAddress, [[[jsonObject valueForKey:@"response"] valueForKey:@"isvalid"] boolValue], nil);
 			return;
 		} else {
-			_isValidAddressCompleteBlock(nil, 0, [jsonObject valueForKey:@"error_info"]);
+			if (_isValidAddressCompleteBlock) _isValidAddressCompleteBlock(nil, 0, [jsonObject valueForKey:@"error_info"]);
 			[self.delegate omnichainFailedWithWallet:self error:@"checkaddress"];
 			return;
 		}
@@ -594,14 +589,14 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_isValidSignatureCompleteBlock(nil, nil, nil, 0, nil);
+				if (_isValidSignatureCompleteBlock) _isValidSignatureCompleteBlock(nil, nil, nil, 0, nil);
 				[self.delegate omnichainFailedWithWallet:self error:@"verifymessage"];
 				return;
 			}
-			_isValidSignatureCompleteBlock(_tempAddress, _tempMessage, _tempSignature, [[[jsonObject valueForKey:@"response"] valueForKey:@"isvalid"] boolValue], nil);
+			if (_isValidSignatureCompleteBlock) _isValidSignatureCompleteBlock(_tempAddress, _tempMessage, _tempSignature, [[[jsonObject valueForKey:@"response"] valueForKey:@"isvalid"] boolValue], nil);
 			return;
 		} else {
-			_isValidSignatureCompleteBlock(nil, nil, nil, 0, [jsonObject valueForKey:@"error_info"]);
+			if (_isValidSignatureCompleteBlock) _isValidSignatureCompleteBlock(nil, nil, nil, 0, [jsonObject valueForKey:@"error_info"]);
 			[self.delegate omnichainFailedWithWallet:self error:@"verifymessage"];
 			return;
 		}
@@ -618,7 +613,7 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_getRichListCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
+				if (_getRichListCompleteBlock) _getRichListCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
 				[self.delegate omnichainFailedWithWallet:self error:@"getrichlist"];
 				return;
 			}
@@ -633,10 +628,10 @@
 												 @"vanity_name":[[[[jsonObject valueForKey:@"response"] valueForKey:@"richlist"] objectAtIndex:personIndex] valueForKey:@"vanity_name"]};
 				[richList addObject:tempPersonDictionary];
 			}
-			_getRichListCompleteBlock([NSArray arrayWithArray:richList], nil);
+			if (_getRichListCompleteBlock) _getRichListCompleteBlock([NSArray arrayWithArray:richList], nil);
 			return;
 		} else {
-			_getRichListCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
+			if (_getRichListCompleteBlock) _getRichListCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
 			[self.delegate omnichainFailedWithWallet:self error:@"getrichlist"];
 			return;
 		}
@@ -653,16 +648,16 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_getStatsCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
+				if (_getStatsCompleteBlock) _getStatsCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
 				[self.delegate omnichainFailedWithWallet:self error:@"getwstats"];
 				return;
 			}
 			NSDictionary *statsDictionary = @{@"users":[NSNumber numberWithInteger:[[[jsonObject valueForKey:@"response"] valueForKey:@"users"] integerValue]],
 											  @"balance":[NSNumber numberWithDouble:[[[jsonObject valueForKey:@"response"] valueForKey:@"balance"] doubleValue]]};
-			_getStatsCompleteBlock(statsDictionary, nil);
+			if (_getStatsCompleteBlock) _getStatsCompleteBlock(statsDictionary, nil);
 			return;
 		} else {
-			_getStatsCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
+			if (_getStatsCompleteBlock) _getStatsCompleteBlock(nil, [jsonObject valueForKey:@"error_info"]);
 			[self.delegate omnichainFailedWithWallet:self error:@"getwstats"];
 			return;
 		}
@@ -679,7 +674,7 @@
 		if (!error) {
 			// check if request is valid
 			if ([[jsonObject valueForKey:@"error"] boolValue] == 1) {
-				_getCalculatedEarningsCompleteBlock(0, 0, nil, [jsonObject valueForKey:@"error_info"]);
+				if (_getCalculatedEarningsCompleteBlock) _getCalculatedEarningsCompleteBlock(0, 0, nil, [jsonObject valueForKey:@"error_info"]);
 				[self.delegate omnichainFailedWithWallet:self error:@"earningscalc"];
 				return;
 			}
@@ -687,17 +682,15 @@
 											  @"weekly":[NSNumber numberWithDouble:[[[jsonObject valueForKey:@"response"] valueForKey:@"weekly"] doubleValue]],
 											  @"monthly":[NSNumber numberWithDouble:[[[jsonObject valueForKey:@"response"] valueForKey:@"monthly"] doubleValue]],
 											  @"yearly":[NSNumber numberWithDouble:[[[jsonObject valueForKey:@"response"] valueForKey:@"yearly"] doubleValue]]};
-			_getCalculatedEarningsCompleteBlock(_tempHashrate, _tempDifficulty, estimationDictionary, nil);
+			if (_getCalculatedEarningsCompleteBlock) _getCalculatedEarningsCompleteBlock(_tempHashrate, _tempDifficulty, estimationDictionary, nil);
 			return;
 		} else {
-			_getCalculatedEarningsCompleteBlock(0, 0, nil, [jsonObject valueForKey:@"error_info"]);
+			if (_getCalculatedEarningsCompleteBlock) _getCalculatedEarningsCompleteBlock(0, 0, nil, [jsonObject valueForKey:@"error_info"]);
 			[self.delegate omnichainFailedWithWallet:self error:@"earningscalc"];
 			return;
 		}
 		return;
 	}
 }
-
-#pragma mark -
 
 @end

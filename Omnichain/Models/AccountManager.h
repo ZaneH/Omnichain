@@ -15,7 +15,7 @@
 
 + (instancetype)sharedInstance;
 
-- (BOOL)signUpWithUsername:(NSString *)username password:(NSString *)password;
-- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password;
+- (NSString *)signUpWithUsername:(NSString *)username password:(NSString *)password;
+- (NSString *)loginWithUsername:(NSString *)username password:(NSString *)password;
 
 @end

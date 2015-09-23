@@ -110,12 +110,23 @@
 		[self presentViewController:passwordMismatchAlertController animated:YES completion:nil];
 	}
 	
-	[[AccountManager sharedInstance] signUpWithUsername:usernameTextField.text
-											   password:passwordTextField.text];
-}
-
-- (IBAction)cancelButtonTapped:(UIButton *)sender {
-	[self dismissViewControllerAnimated:YES completion:nil];
+	NSString *error = [[AccountManager sharedInstance] signUpWithUsername:usernameTextField.text password:passwordTextField.text];
+	if (!error) {
+		// if there's nothing inside the return value, it passed.
+		[indicator stopAnimating];
+		[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+		// TODO: Sign in behind the scenes, and take to wallet view
+	} else {
+		// otherwise, it returned the error as a string.
+		[indicator stopAnimating];
+		[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+		UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Registration Error" message:error preferredStyle:UIAlertControllerStyleAlert];
+		UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+			[errorController dismissViewControllerAnimated:YES completion:nil];
+		}];
+		[errorController addAction:dismissAction];
+		[self presentViewController:errorController animated:YES completion:nil];
+	}
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
