@@ -17,7 +17,7 @@
 @end
 
 @implementation LoginViewController
-@synthesize loginButton, cancelButton, usernameTextField, passwordTextField;
+@synthesize loginButton, usernameTextField, passwordTextField;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,10 +32,7 @@
 	[loginButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 	
 	loginButton.backgroundColor = [UIColor mainPurpleColor];
-	
-	cancelButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:18];
-	[cancelButton setTitleColor:[UIColor mainPurpleColor] forState:UIControlStateNormal];
-	
+
 	// iOS 7 'Floaty Effect'
 	UIInterpolatingMotionEffect *horizontalMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
 	UIInterpolatingMotionEffect *verticalMotionEffect   = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
@@ -90,23 +87,27 @@
 	[indicator setHidesWhenStopped:YES];
 	[indicator startAnimating];
 	
-	NSString *error = [[AccountManager sharedInstance] loginWithUsername:usernameTextField.text password:passwordTextField.text];
-	if (!error) {
-		// if there's nothing inside the return value, it passed.
-		[indicator stopAnimating];
-		[loginButton setTitle:@"Login" forState:UIControlStateNormal];
-		// TODO: Take to wallets view
-	} else {
-		// otherwise, it returned the error as a string.
-		[indicator stopAnimating];
-		[loginButton setTitle:@"Login" forState:UIControlStateNormal];
-		UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Sign In Error" message:error preferredStyle:UIAlertControllerStyleAlert];
-		UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-			[errorController dismissViewControllerAnimated:YES completion:nil];
-		}];
-		[errorController addAction:dismissAction];
-		[self presentViewController:errorController animated:YES completion:nil];
-	}
+	[[AccountManager sharedInstance] loginWithUsername:usernameTextField.text
+											  password:passwordTextField.text
+											   success:^{
+												   [indicator stopAnimating];
+												   [loginButton setTitle:@"Login" forState:UIControlStateNormal];
+												   // TODO: Take to wallet view
+											   } failure:^(OMChainWallet *wallet, NSString *error) {
+												   [indicator stopAnimating];
+												   [loginButton setTitle:@"Login" forState:UIControlStateNormal];
+												   UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Sign In Error" message:error preferredStyle:UIAlertControllerStyleAlert];
+												   UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+													   [errorController dismissViewControllerAnimated:YES completion:nil];
+												   }];
+												   [errorController addAction:dismissAction];
+												   [self presentViewController:errorController animated:YES completion:nil];
+											   }];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+	[super viewDidDisappear:animated];
+	[[AccountManager sharedInstance] stopCurrentRequest];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

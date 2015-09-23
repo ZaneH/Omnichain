@@ -15,7 +15,9 @@
 
 + (instancetype)sharedInstance;
 
-- (NSString *)signUpWithUsername:(NSString *)username password:(NSString *)password;
-- (NSString *)loginWithUsername:(NSString *)username password:(NSString *)password;
+- (void)signUpWithUsername:(NSString *)username password:(NSString *)password success:(void (^)())successBlock failure:(void (^)(OMChainWallet *wallet, NSString *error))failureBlock;
+- (void)loginWithUsername:(NSString *)username password:(NSString *)password success:(void (^)())successBlock failure:(void (^)(OMChainWallet *wallet, NSString *error))failureBlock;
+
+- (void)stopCurrentRequest;
 
 @end

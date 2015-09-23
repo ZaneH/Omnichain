@@ -42,14 +42,12 @@
 
 #pragma mark - Initializers
 
-- (instancetype)initWithUsername:(NSString *)username password:(NSString *)password success:(void (^)(OMChainWallet *wallet))successBlock failure:(void (^)(OMChainWallet *wallet, NSString *error))failureBlock {
+- (instancetype)initWithUsername:(NSString *)username password:(NSString *)password {
 	self = [super init];
 	if (self) {
 		self.username = username;
 		self.passwordHash = [self createSHA512WithString:password];
 		_timeOutInterval = 60;
-		_successBlock = successBlock;
-		_failedBlock = failureBlock;
 	}
 	return self;
 }
@@ -159,7 +157,7 @@
 
 #pragma mark - API Interaction Methods
 
-- (void)attemptSignInWithSuccess:(void (^)())successBlock failed:(void (^)(OMChainWallet *, NSString *))failureBlock {
+- (void)attemptSignInWithSuccess:(void (^)())successBlock failed:(void (^)(OMChainWallet *wallet, NSString *error))failureBlock {
 	_successBlock = successBlock;
 	_failedBlock = failureBlock;
 	[self createAPIRequestWithMethod:@"wallet_login"
@@ -284,6 +282,10 @@
 											  timeoutInterval:_timeOutInterval];
 	[callMethodRequest setHTTPMethod:@"GET"];
 	[NSURLConnection connectionWithRequest:callMethodRequest delegate:self];
+}
+
+- (void)stopCurrentRequest {
+	[NSURLConnection cancelPreviousPerformRequestsWithTarget:self];
 }
 
 #pragma mark - NSURLConnection Delegate Methods

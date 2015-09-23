@@ -17,7 +17,7 @@
 @end
 
 @implementation SignUpViewController
-@synthesize usernameTextField, passwordTextField, confirmPasswordTextField, signUpButton, cancelButton;
+@synthesize usernameTextField, passwordTextField, confirmPasswordTextField, signUpButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,10 +32,7 @@
 	[signUpButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 	
 	signUpButton.backgroundColor = [UIColor mainPurpleColor];
-	
-	cancelButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:18];
-	[cancelButton setTitleColor:[UIColor mainPurpleColor] forState:UIControlStateNormal];
-	
+
 	// iOS 7 'Floaty Effect'
 	UIInterpolatingMotionEffect *horizontalMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
 	UIInterpolatingMotionEffect *verticalMotionEffect   = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
@@ -110,23 +107,27 @@
 		[self presentViewController:passwordMismatchAlertController animated:YES completion:nil];
 	}
 	
-	NSString *error = [[AccountManager sharedInstance] signUpWithUsername:usernameTextField.text password:passwordTextField.text];
-	if (!error) {
-		// if there's nothing inside the return value, it passed.
-		[indicator stopAnimating];
-		[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
-		// TODO: Sign in behind the scenes, and take to wallet view
-	} else {
-		// otherwise, it returned the error as a string.
-		[indicator stopAnimating];
-		[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
-		UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Registration Error" message:error preferredStyle:UIAlertControllerStyleAlert];
-		UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-			[errorController dismissViewControllerAnimated:YES completion:nil];
-		}];
-		[errorController addAction:dismissAction];
-		[self presentViewController:errorController animated:YES completion:nil];
-	}
+	[[AccountManager sharedInstance] signUpWithUsername:usernameTextField.text
+											   password:passwordTextField.text
+												success:^{
+													[indicator stopAnimating];
+													[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+													// TODO: Sign in user, and take to wallet view
+												} failure:^(OMChainWallet *wallet, NSString *error) {
+													[indicator stopAnimating];
+													[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+													UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Registration Error" message:error preferredStyle:UIAlertControllerStyleAlert];
+													UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+														[errorController dismissViewControllerAnimated:YES completion:nil];
+													}];
+													[errorController addAction:dismissAction];
+													[self presentViewController:errorController animated:YES completion:nil];
+												}];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+	[super viewDidDisappear:animated];
+	[[AccountManager sharedInstance] stopCurrentRequest];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

@@ -111,8 +111,6 @@ typedef void (^GenerateAddressSuccess)(NSString *address);
  */
 @property (nonatomic, weak) id<OMChainDelegate> delegate;
 
-#pragma mark -
-
 #pragma mark - Initializers
 
 /**
@@ -123,7 +121,7 @@ typedef void (^GenerateAddressSuccess)(NSString *address);
  *
  *  @return A new wallet object
  */
-- (instancetype)initWithUsername:(NSString *)username password:(NSString *)password success:(void (^)(OMChainWallet *wallet))successBlock failure:(void (^)(OMChainWallet *wallet, NSString *error))failureBlock;
+- (instancetype)initWithUsername:(NSString *)username password:(NSString *)password;
 
 /**
  *  A method that returns a blank Omnicoin wallet
@@ -132,13 +130,19 @@ typedef void (^GenerateAddressSuccess)(NSString *address);
  */
 - (instancetype)init;
 
-#pragma mark -
-
 #pragma mark - Configuration Methods
 
+/**
+ *  Set a timeout for the current request
+ *
+ *  @param timeOut A timeout in seconds
+ */
 - (void)setTimout:(NSUInteger)timeOut;
 
-#pragma mark -
+/**
+ *  Ends the current API request
+ */
+- (void)stopCurrentRequest;
 
 #pragma mark - Mostly Statistics API Interaction Method Declarations
 
@@ -202,8 +206,6 @@ typedef void (^GenerateAddressSuccess)(NSString *address);
 - (void)omcCalculateEarningsWithHashrate:(double)hashrate
 							  difficulty:(double)difficulty
 					   completionHandler:(void (^)(double hashrate, double difficulty, NSDictionary *data, NSString *error))ch;
-
-#pragma mark -
 
 #pragma mark - API Interaction Method Declarations
 

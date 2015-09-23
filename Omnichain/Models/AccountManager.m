@@ -22,38 +22,27 @@
 	return _sharedInstance;
 }
 
-- (NSString *)signUpWithUsername:(NSString *)username password:(NSString *)password {
-	__block NSString *_error = nil;
+- (void)signUpWithUsername:(NSString *)username password:(NSString *)password success:(void (^)())successBlock failure:(void (^)(OMChainWallet *wallet, NSString *error))failureBlock {
 	[[OMChainWallet alloc] registerAccountWithUsername:username
 											  password:password
 											   success:^{
-												   // there is no error, leave it nil
+												   successBlock();
 											   } failed:^(OMChainWallet *wallet, NSString *error) {
-												   // there is an error, set `_error` equal to the error
-												   _error = error;
+												   failureBlock(wallet, error);
 											   }];
-	
-	return _error;
 }
 
-- (NSString *)loginWithUsername:(NSString *)username password:(NSString *)password {
-	__block NSString *_error = nil;
-	userWallet = [[OMChainWallet alloc] initWithUsername:username
-												password:password
-												 success:^(OMChainWallet *wallet) {
-													 [wallet attemptSignInWithSuccess:^{
-														 // until this method is called, not much is made of the wallet
-														 [userWallet refreshWalletInfo];
-													 } failed:^(OMChainWallet *wallet, NSString *error) {
-														 // there is an error, set `_error` equal to the error
-														 _error = error;
-													 }];
-												 } failure:^(OMChainWallet *wallet, NSString *error) {
-													 // there is an error, set `_error` equal to the error
-													 _error = error;
-												 }];
-	
-	return _error;
+- (void)loginWithUsername:(NSString *)username password:(NSString *)password success:(void (^)())successBlock failure:(void (^)(OMChainWallet *wallet, NSString *error))failureBlock {
+	userWallet = [[OMChainWallet alloc] initWithUsername:username password:password];
+	[userWallet attemptSignInWithSuccess:^{
+		successBlock();
+	} failed:^(OMChainWallet *wallet, NSString *error) {
+		failureBlock(wallet, error);
+	}];
+}
+
+- (void)stopCurrentRequest {
+	[userWallet stopCurrentRequest];
 }
 
 @end

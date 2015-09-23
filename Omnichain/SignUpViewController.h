@@ -11,7 +11,6 @@
 @interface SignUpViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
-@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
