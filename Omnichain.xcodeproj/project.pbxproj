@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F4DC76E1BB28F1E0031C104 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DC76D1BB28F1E0031C104 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2F8E972C1BB24A1A00C82D0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E972B1BB24A1A00C82D0A /* main.m */; };
 		2F8E97351BB24A1A00C82D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8E97331BB24A1A00C82D0A /* Main.storyboard */; };
 		2F8E97371BB24A1A00C82D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F8E97361BB24A1A00C82D0A /* Assets.xcassets */; };
@@ -16,8 +17,8 @@
 		2FA4E04D1BB265C400A5166C /* UIColor+OMCBranding.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4E04C1BB265C400A5166C /* UIColor+OMCBranding.m */; settings = {ASSET_TAGS = (); }; };
 		2FA4E05B1BB27CE600A5166C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4E05A1BB27CE600A5166C /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		2FA4E05E1BB27CF600A5166C /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4E05D1BB27CF600A5166C /* AccountManager.m */; settings = {ASSET_TAGS = (); }; };
-		2FA4E0611BB27D0200A5166C /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4E0601BB27D0200A5166C /* SignInViewController.m */; settings = {ASSET_TAGS = (); }; };
-		2FA4E0641BB27D0900A5166C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4E0631BB27D0900A5166C /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2FA4E0611BB27D0200A5166C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4E0601BB27D0200A5166C /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2FA4E0641BB27D0900A5166C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4E0631BB27D0900A5166C /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		35ECED4ADE22052BB0EAAD51 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3B342C2B35E2F7773F9CD7 /* libPods.a */; };
 		E7E9EA7852727463A69EE575 /* libPods-UI Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E80F7BF7D5DD0B276AED38 /* libPods-UI Tests.a */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		0D917E5B1D04D29E07881500 /* Pods-UI Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UI Tests/Pods-UI Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2F4DC76C1BB28F1E0031C104 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		2F4DC76D1BB28F1E0031C104 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		2F8E97271BB24A1A00C82D0A /* Omnichain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omnichain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8E972B1BB24A1A00C82D0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F8E97341BB24A1A00C82D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,10 +53,10 @@
 		2FA4E05A1BB27CE600A5166C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "App Delegates/AppDelegate.m"; sourceTree = "<group>"; };
 		2FA4E05C1BB27CF600A5166C /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountManager.h; path = Models/AccountManager.h; sourceTree = "<group>"; };
 		2FA4E05D1BB27CF600A5166C /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountManager.m; path = Models/AccountManager.m; sourceTree = "<group>"; };
-		2FA4E05F1BB27D0200A5166C /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = "View Controllers/SignInViewController.h"; sourceTree = "<group>"; };
-		2FA4E0601BB27D0200A5166C /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInViewController.m; path = "View Controllers/SignInViewController.m"; sourceTree = "<group>"; };
-		2FA4E0621BB27D0900A5166C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = "View Controllers/LoginViewController.h"; sourceTree = "<group>"; };
-		2FA4E0631BB27D0900A5166C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = "View Controllers/LoginViewController.m"; sourceTree = "<group>"; };
+		2FA4E05F1BB27D0200A5166C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = "View Controllers/LoginViewController.h"; sourceTree = "<group>"; };
+		2FA4E0601BB27D0200A5166C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = "View Controllers/LoginViewController.m"; sourceTree = "<group>"; };
+		2FA4E0621BB27D0900A5166C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = "View Controllers/HomeViewController.h"; sourceTree = "<group>"; };
+		2FA4E0631BB27D0900A5166C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = "View Controllers/HomeViewController.m"; sourceTree = "<group>"; };
 		352F2B3D310B720C2AE72529 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		90A9A2E29084FE0D8D036A6F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A7E80F7BF7D5DD0B276AED38 /* libPods-UI Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UI Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4DC76B1BB28EEA0031C104 /* Sign Up VC */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DC76C1BB28F1E0031C104 /* SignUpViewController.h */,
+				2F4DC76D1BB28F1E0031C104 /* SignUpViewController.m */,
+			);
+			name = "Sign Up VC";
+			sourceTree = "<group>";
+		};
 		2F8E971E1BB24A1A00C82D0A = {
 			isa = PBXGroup;
 			children = (
@@ -146,8 +158,9 @@
 		2FA4E04A1BB264A700A5166C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2FA4E0521BB27A5D00A5166C /* Sign Up / Sign In VC */,
+				2FA4E0521BB27A5D00A5166C /* Home VC */,
 				2FA4E0531BB27A7600A5166C /* Login VC */,
+				2F4DC76B1BB28EEA0031C104 /* Sign Up VC */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -161,20 +174,20 @@
 			name = "Branding Colors";
 			sourceTree = "<group>";
 		};
-		2FA4E0521BB27A5D00A5166C /* Sign Up / Sign In VC */ = {
+		2FA4E0521BB27A5D00A5166C /* Home VC */ = {
 			isa = PBXGroup;
 			children = (
-				2FA4E0621BB27D0900A5166C /* LoginViewController.h */,
-				2FA4E0631BB27D0900A5166C /* LoginViewController.m */,
+				2FA4E0621BB27D0900A5166C /* HomeViewController.h */,
+				2FA4E0631BB27D0900A5166C /* HomeViewController.m */,
 			);
-			name = "Sign Up / Sign In VC";
+			name = "Home VC";
 			sourceTree = "<group>";
 		};
 		2FA4E0531BB27A7600A5166C /* Login VC */ = {
 			isa = PBXGroup;
 			children = (
-				2FA4E05F1BB27D0200A5166C /* SignInViewController.h */,
-				2FA4E0601BB27D0200A5166C /* SignInViewController.m */,
+				2FA4E05F1BB27D0200A5166C /* LoginViewController.h */,
+				2FA4E0601BB27D0200A5166C /* LoginViewController.m */,
 			);
 			name = "Login VC";
 			sourceTree = "<group>";
@@ -384,11 +397,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA4E0641BB27D0900A5166C /* LoginViewController.m in Sources */,
-				2FA4E0611BB27D0200A5166C /* SignInViewController.m in Sources */,
+				2FA4E0641BB27D0900A5166C /* HomeViewController.m in Sources */,
+				2FA4E0611BB27D0200A5166C /* LoginViewController.m in Sources */,
 				2FA4E05E1BB27CF600A5166C /* AccountManager.m in Sources */,
 				2FA4E04D1BB265C400A5166C /* UIColor+OMCBranding.m in Sources */,
 				2F8E972C1BB24A1A00C82D0A /* main.m in Sources */,
+				2F4DC76E1BB28F1E0031C104 /* SignUpViewController.m in Sources */,
 				2FA4E05B1BB27CE600A5166C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

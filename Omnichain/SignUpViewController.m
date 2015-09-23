@@ -1,37 +1,37 @@
 //
-//  LoginViewController.m
+//  SignUpViewController.m
 //  Omnichain
 //
 //  Created by Zane Helton on 9/23/15.
 //  Copyright © 2015 Zane Helton. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "SignUpViewController.h"
 #import "UIColor+OMCBranding.h"
 #import "AccountManager.h"
 
-@interface LoginViewController () {
+@interface SignUpViewController () {
 	UIActivityIndicatorView *indicator;
 }
 
 @end
 
-@implementation LoginViewController
-@synthesize loginButton, cancelButton, usernameTextField, passwordTextField;
+@implementation SignUpViewController
+@synthesize usernameTextField, passwordTextField, confirmPasswordTextField, signUpButton, cancelButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// customizing the buttons
-	loginButton.layer.cornerRadius = 4;
+	signUpButton.layer.cornerRadius = 4;
 	
-	loginButton.layer.shadowRadius = 10;
-	loginButton.layer.shadowOpacity = 0.75;
-	loginButton.layer.shadowColor = [UIColor blackColor].CGColor;
+	signUpButton.layer.shadowRadius = 10;
+	signUpButton.layer.shadowOpacity = 0.75;
+	signUpButton.layer.shadowColor = [UIColor blackColor].CGColor;
 	
-	loginButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:18];
-	[loginButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+	signUpButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:18];
+	[signUpButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 	
-	loginButton.backgroundColor = [UIColor mainPurpleColor];
+	signUpButton.backgroundColor = [UIColor mainPurpleColor];
 	
 	cancelButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:18];
 	[cancelButton setTitleColor:[UIColor mainPurpleColor] forState:UIControlStateNormal];
@@ -43,7 +43,7 @@
 	horizontalMotionEffect.maximumRelativeValue = @(15);
 	verticalMotionEffect.minimumRelativeValue   = @(-15);
 	verticalMotionEffect.maximumRelativeValue   = @(15);
-	[loginButton setMotionEffects:@[horizontalMotionEffect, verticalMotionEffect]];
+	[signUpButton setMotionEffects:@[horizontalMotionEffect, verticalMotionEffect]];
 	
 	// customizing the text fields
 	CALayer *usernameBottomStand = [CALayer layer];
@@ -60,13 +60,25 @@
 	passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Your password" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithWhite:1 alpha:0.5]}];
 	passwordTextField.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:18];
 	
+	CALayer *confirmPasswordBottomStand = [CALayer layer];
+	confirmPasswordBottomStand.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5].CGColor;
+	confirmPasswordBottomStand.frame = CGRectMake(0, confirmPasswordTextField.frame.size.height - 1, confirmPasswordTextField.frame.size.width, 1);
+	[confirmPasswordTextField.layer addSublayer:confirmPasswordBottomStand];
+	confirmPasswordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Confirm your password" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithWhite:1 alpha:0.5]}];
+	confirmPasswordTextField.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:18];
+	
 	// setup keyboard navigation
 	usernameTextField.delegate = self;
 	passwordTextField.delegate = self;
+	confirmPasswordTextField.delegate = self;
 	
 	// setup loading indicator
 	indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 	[indicator setFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2 - 30, 5, 30, 30)];
+}
+
+- (IBAction)signUpButtonTapped:(UIButton *)sender {
+	[self signUp];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -75,40 +87,35 @@
 		[passwordTextField becomeFirstResponder];
 	} else if ([passwordTextField isFirstResponder]) {
 		[passwordTextField resignFirstResponder];
-		[self login];
+		[confirmPasswordTextField becomeFirstResponder];
+	} else if ([confirmPasswordTextField isFirstResponder]) {
+		[confirmPasswordTextField resignFirstResponder];
+		[self signUp];
 	}
 	return NO;
 }
 
-- (IBAction)loginButtonTapped:(UIButton *)sender {
-	[self login];
+- (void)signUp {
+	if (![passwordTextField.text isEqualToString:confirmPasswordTextField.text]) {
+		// confirmation password and original password don't match
+		UIAlertController *passwordMismatchAlertController = [UIAlertController alertControllerWithTitle:@"Password Mismatch"
+																								 message:@"Your passwords don't match."
+																						  preferredStyle:UIAlertControllerStyleAlert];
+		UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss"
+																style:UIAlertActionStyleDefault
+															  handler:^(UIAlertAction * _Nonnull action) {
+																  [passwordMismatchAlertController dismissViewControllerAnimated:YES completion:nil];
+															  }];
+		[passwordMismatchAlertController addAction:dismissAction];
+		[self presentViewController:passwordMismatchAlertController animated:YES completion:nil];
+	}
+	
+	[[AccountManager sharedInstance] signUpWithUsername:usernameTextField.text
+											   password:passwordTextField.text];
 }
 
 - (IBAction)cancelButtonTapped:(UIButton *)sender {
 	[self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)login {
-	[loginButton setTitle:@"" forState:UIControlStateNormal];
-	[loginButton addSubview:indicator];
-	[indicator setHidesWhenStopped:YES];
-	[indicator startAnimating];
-	
-	if ([[AccountManager sharedInstance] loginWithUsername:usernameTextField.text password:passwordTextField.text]) {
-		[indicator stopAnimating];
-		[loginButton setTitle:@"Login" forState:UIControlStateNormal];
-		NSLog(@"Successfully logged in.");
-		// TODO: Take to wallets view
-	} else {
-		[indicator stopAnimating];
-		[loginButton setTitle:@"Login" forState:UIControlStateNormal];
-		UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Sign In Error" message:@"Your username or password is incorrect." preferredStyle:UIAlertControllerStyleAlert];
-		UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-			[errorController dismissViewControllerAnimated:YES completion:nil];
-		}];
-		[errorController addAction:dismissAction];
-		[self presentViewController:errorController animated:YES completion:nil];
-	}
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

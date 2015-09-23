@@ -1,5 +1,5 @@
 //
-//  SignInViewController.h
+//  SignUpViewController.h
 //  Omnichain
 //
 //  Created by Zane Helton on 9/23/15.
@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignInViewController : UIViewController <UITextFieldDelegate>
+@interface SignUpViewController : UIViewController <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 
 @end

@@ -22,7 +22,7 @@
 	return _sharedInstance;
 }
 
-- (BOOL)registerAccountWithUsername:(NSString *)username password:(NSString *)password {
+- (BOOL)signUpWithUsername:(NSString *)username password:(NSString *)password {
 	__block BOOL success;
 	[[OMChainWallet alloc] registerAccountWithUsername:username
 											  password:password
@@ -35,7 +35,7 @@
 	return success;
 }
 
-- (BOOL)signInWithUsername:(NSString *)username password:(NSString *)password {
+- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password {
 	__block BOOL success;
 	userWallet = [[OMChainWallet alloc] initWithUsername:username
 												password:password
