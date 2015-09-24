@@ -1,3 +1,7 @@
 language: objective-c
-xcode_project: Omnichain.xcworkspace
-xcode_scheme: UI Tests
+before_install:
+  - sudo gem install cocoapods
+  - brew update
+  - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+script:
+  xctool -project Omnichain/Omnichain.xcworkspace -scheme Omnichain -sdk iphonesimulator build test -freshInstall -freshSimulator
