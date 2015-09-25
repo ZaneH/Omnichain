@@ -3,3 +3,4 @@ target 'UI Tests', :exclusive => true do
 end
 
 pod 'OMChainKit'
+pod 'SSKeychain'

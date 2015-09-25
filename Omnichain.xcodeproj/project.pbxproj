@@ -10,6 +10,7 @@
 		01E4300DB1CD8CE34A97740C /* libPods-UI Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB7540E74B54FFE94F1E02E /* libPods-UI Tests.a */; };
 		2F21F4EF1BB318A800EABA2D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F21F4EE1BB318A800EABA2D /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2F21F4FF1BB31C1C00EABA2D /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F21F4FE1BB31C1C00EABA2D /* LoginTests.m */; settings = {ASSET_TAGS = (); }; };
+		2F2744BF1BB5D44C00B54EAB /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2744BE1BB5D44C00B54EAB /* WalletViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2F8E972C1BB24A1A00C82D0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E972B1BB24A1A00C82D0A /* main.m */; };
 		2F8E97351BB24A1A00C82D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8E97331BB24A1A00C82D0A /* Main.storyboard */; };
 		2F8E97371BB24A1A00C82D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F8E97361BB24A1A00C82D0A /* Assets.xcassets */; };
@@ -38,6 +39,8 @@
 		2F21F4F41BB31ABD00EABA2D /* UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F21F4F81BB31ABD00EABA2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F21F4FE1BB31C1C00EABA2D /* LoginTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTests.m; sourceTree = "<group>"; };
+		2F2744BD1BB5D44C00B54EAB /* WalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WalletViewController.h; path = "View Controllers/WalletViewController.h"; sourceTree = "<group>"; };
+		2F2744BE1BB5D44C00B54EAB /* WalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WalletViewController.m; path = "View Controllers/WalletViewController.m"; sourceTree = "<group>"; };
 		2F8E97271BB24A1A00C82D0A /* Omnichain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omnichain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8E972B1BB24A1A00C82D0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F8E97341BB24A1A00C82D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +93,15 @@
 			);
 			name = "UI Tests";
 			path = "../UI Tests";
+			sourceTree = "<group>";
+		};
+		2F2744BC1BB5D40100B54EAB /* Wallet VC */ = {
+			isa = PBXGroup;
+			children = (
+				2F2744BD1BB5D44C00B54EAB /* WalletViewController.h */,
+				2F2744BE1BB5D44C00B54EAB /* WalletViewController.m */,
+			);
+			name = "Wallet VC";
 			sourceTree = "<group>";
 		};
 		2F4DC76B1BB28EEA0031C104 /* Sign Up VC */ = {
@@ -156,6 +168,7 @@
 		2FA4E04A1BB264A700A5166C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2F2744BC1BB5D40100B54EAB /* Wallet VC */,
 				2FA4E0521BB27A5D00A5166C /* Home VC */,
 				2FA4E0531BB27A7600A5166C /* Login VC */,
 				2F4DC76B1BB28EEA0031C104 /* Sign Up VC */,
@@ -404,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA4E0641BB27D0900A5166C /* HomeViewController.m in Sources */,
+				2F2744BF1BB5D44C00B54EAB /* WalletViewController.m in Sources */,
 				2FA4E0611BB27D0200A5166C /* LoginViewController.m in Sources */,
 				2FA4E05E1BB27CF600A5166C /* AccountManager.m in Sources */,
 				2FA4E04D1BB265C400A5166C /* UIColor+OMCBranding.m in Sources */,

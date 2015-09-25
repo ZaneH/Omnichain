@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "UIColor+OMCBranding.h"
 #import "AccountManager.h"
+#import <SSKeychain/SSKeychain.h>
 
 @interface LoginViewController () {
 	UIActivityIndicatorView *indicator;
@@ -92,7 +93,22 @@
 											   success:^{
 												   [indicator stopAnimating];
 												   [loginButton setTitle:@"Login" forState:UIControlStateNormal];
-												   // TODO: Take to wallet view
+												   
+												   // Save password alertcontroller
+												   UIAlertController *savePasswordAlertController = [UIAlertController alertControllerWithTitle:@"Save Password?" message:@"Would you like Omnichain to remember your password?" preferredStyle:UIAlertControllerStyleAlert];
+												   UIAlertAction *noAlertAction = [UIAlertAction actionWithTitle:@"Don't Remember Password" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+													   [self dismissViewControllerAnimated:savePasswordAlertController completion:nil];
+													   [self performSegueWithIdentifier:@"toWalletVC" sender:self];
+												   }];
+												   UIAlertAction *savePasswordAlertAction = [UIAlertAction actionWithTitle:@"Remember Password" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+													   [SSKeychain setPassword:passwordTextField.text forService:@"Omnichain" account:usernameTextField.text];
+													   [self performSegueWithIdentifier:@"toWalletVC" sender:self];
+												   }];
+												   [savePasswordAlertController addAction:noAlertAction];
+												   [savePasswordAlertController addAction:savePasswordAlertAction];
+												   
+												   [self presentViewController:savePasswordAlertController animated:YES completion:nil];
+												   
 											   } failure:^(OMChainWallet *wallet, NSString *error) {
 												   [indicator stopAnimating];
 												   [loginButton setTitle:@"Login" forState:UIControlStateNormal];

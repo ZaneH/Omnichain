@@ -9,6 +9,7 @@
 #import "SignUpViewController.h"
 #import "UIColor+OMCBranding.h"
 #import "AccountManager.h"
+#import <SSKeychain/SSKeychain.h>
 
 @interface SignUpViewController () {
 	UIActivityIndicatorView *indicator;
@@ -112,7 +113,34 @@
 												success:^{
 													[indicator stopAnimating];
 													[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
-													// TODO: Sign in user, and take to wallet view
+													
+													[[AccountManager sharedInstance] loginWithUsername:usernameTextField.text
+																							  password:passwordTextField.text
+																							   success:^{
+																								   
+																								   // Save password alertcontroller
+																								   UIAlertController *savePasswordAlertController = [UIAlertController alertControllerWithTitle:@"Save Password?" message:@"Would you like Omnichain to remember your password?" preferredStyle:UIAlertControllerStyleAlert];
+																								   UIAlertAction *noAlertAction = [UIAlertAction actionWithTitle:@"Don't Remember Password" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+																									   [self dismissViewControllerAnimated:savePasswordAlertController completion:nil];
+																									   [self performSegueWithIdentifier:@"toWalletVC" sender:self];
+																								   }];
+																								   UIAlertAction *savePasswordAlertAction = [UIAlertAction actionWithTitle:@"Remember Password" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+																									   [SSKeychain setPassword:passwordTextField.text forService:@"Omnichain" account:usernameTextField.text];
+																									   [self performSegueWithIdentifier:@"toWalletVC" sender:self];
+																								   }];
+																								   [savePasswordAlertController addAction:noAlertAction];
+																								   [savePasswordAlertController addAction:savePasswordAlertAction];
+																								   
+																								   [self presentViewController:savePasswordAlertController animated:YES completion:nil];
+																								   
+																							   } failure:^(OMChainWallet *wallet, NSString *error) {
+																								   UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Registration Error" message:error preferredStyle:UIAlertControllerStyleAlert];
+																								   UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+																									   [errorController dismissViewControllerAnimated:YES completion:nil];
+																								   }];
+																								   [errorController addAction:dismissAction];
+																								   [self presentViewController:errorController animated:YES completion:nil];
+																							   }];
 												} failure:^(OMChainWallet *wallet, NSString *error) {
 													[indicator stopAnimating];
 													[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];

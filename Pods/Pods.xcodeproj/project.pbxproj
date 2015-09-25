@@ -7,189 +7,222 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		020C41D39309245F58BE7B1D3F8A9315 /* KIFTestStepValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = F434BDA9724E98F4631E856E81AFFD38 /* KIFTestStepValidation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		03E377EDE009B32D4DCDA128D65E8635 /* UIView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EF9E5F3F1E9FDA9B3A5961450542CA /* UIView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0625B021EE4CAABB9CF1D6B7CE520FCA /* KIFTestStepValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6012E12F6DB87EEC04CB9869F27843B6 /* KIFTestStepValidation.h */; };
-		0AF47328BBD130CE3AB668D287BEED8A /* UIView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 62F1CA69BE1DAB8D1AA19CEEC63FBAC7 /* UIView-KIFAdditions.h */; };
-		0C21AFD230798C240DC3A9A8F6C58EE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F967621522F40F2BFAA227BB8802AC4F /* Foundation.framework */; };
-		0E411E306EA191B290297985582F3022 /* NSException-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A64D5B1AE645922540CFEDE39A2EDD3F /* NSException-KIFAdditions.h */; };
-		0F182C6521791F9D5340759EBCAEAAC9 /* KIFTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = BD37FEF0A1FB867E04DA2722A3DCB0FD /* KIFTestCase.h */; };
-		1474C8AFB4F8C409F9E7780B71104AAE /* UIAutomationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4B6B921416B1FC799AB86BB72E0DBA /* UIAutomationHelper.h */; };
-		14D0A5C0311448A929FCD0D85E0D9962 /* UIScrollView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 918EAD2CE95E47291559D83E14527E07 /* UIScrollView-KIFAdditions.h */; };
-		202E967705CC8E136C6BBF88D0B6FA24 /* UITableView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EDBB9D3F82BDDDD0C7F424AD162671AF /* UITableView-KIFAdditions.h */; };
-		2969D913E80F9B6CDBF74FBD06C10C8B /* KIFTestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2926C3C42FF2313D762862D7AC1B9D81 /* KIFTestActor.h */; };
-		2F73A867FDF701968F3C482B05C63AF7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62DC075A998EA0D0CF9AB858651B9FE /* XCTest.framework */; };
-		3096B884B6F950837DBB0705726E7B24 /* KIFUITestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D508C37686C488D2FFD9562EE227740 /* KIFUITestActor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3514E6B04735781D78F647D9B5C57C85 /* OMChainTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 868DB02CFC16E5AB9A5EC6F67DEF4085 /* OMChainTransaction.h */; };
-		36C1065004A63ECA36AC346F3E04200B /* NSBundle-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 12768BF3395ADDE4BC1A9A5F33C9259B /* NSBundle-KIFAdditions.h */; };
-		3E6C89B5C6E4F38CA26DC6E353602C56 /* LoadableCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 692756EBDD7DDDC1B0F48930371DB7B3 /* LoadableCategory.h */; };
-		3F70805573B1FF838A48F1492326D18B /* OMChainAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D3627F5D567BB7A434476C2F6B58E78 /* OMChainAddress.h */; };
-		3F87A922BCFAD469FA61B88D6DD4A05D /* NSFileManager-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 308C29BDF7FF5EC7A58917140D0360DB /* NSFileManager-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		412ACB1A55E2701341851A65EB29F729 /* NSError-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA6C3B202FD5E36051E92D3501DEFF /* NSError-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		53CB7F0C2369F8AFB476C8E3D9C34860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F967621522F40F2BFAA227BB8802AC4F /* Foundation.framework */; };
-		58F79BD4C39C148A80A10EDF3BDCF588 /* UIWindow-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B022B6A6430F39961EBB676F6230AE1 /* UIWindow-KIFAdditions.h */; };
-		59631929D9C497797FD1D9D0C7A864E5 /* KIFTestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 336C64A2C9E38A34539807FC54CFD717 /* KIFTestActor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5A697086B34814F2505631FFCE7A208C /* IOHIDEvent+KIF.h in Headers */ = {isa = PBXBuildFile; fileRef = B73F092AFC78FD973E6ABF1B991F2D45 /* IOHIDEvent+KIF.h */; };
-		5F6B3C0630944A606C4EF210801A2C49 /* NSFileManager-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EBDE1E35FE878155EF9FB78E5F3CCCF /* NSFileManager-KIFAdditions.h */; };
-		65E2807397C5B5DB20A7C6092F4DA395 /* XCTestCase-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC3EF9310D711ADCF2FF9131C91A5D /* XCTestCase-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		679E583A60ED4B524F6E488AB37E63D0 /* UIScrollView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB6226A09EBA97F47A73A19161CBEEE /* UIScrollView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		72ECD042CE4A71F0C7D382FF6E17E7D6 /* OMChainAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A9BFAF210D6593DA814F8D79267636 /* OMChainAddress.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		73C25EFF44EFBED5E82D878605D3A4A9 /* CGGeometry-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 615CE78BC4D103991DBCA0B85A2D4AD9 /* CGGeometry-KIFAdditions.h */; };
-		7DC88821980287DD7D7D4369BA58BFEF /* UIEvent+KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F3139D85E3B0E31749D9EFDF274F6 /* UIEvent+KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		807A05052A45BA525D534CD36C15BA04 /* UIWindow-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9015EE04064BC77D469EC92FFE434B60 /* UIWindow-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8083290A2759E147860C81BE41ABB260 /* UIAccessibilityElement-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 14EBC199870A6F6A04E79684D80C0C17 /* UIAccessibilityElement-KIFAdditions.h */; };
-		814B227950F7A20E711B69E9C237AEDD /* KIFSystemTestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = C0A69053E1CC42004FE07F3685DF8C17 /* KIFSystemTestActor.h */; };
-		8152826B8C159B63D2FD35B799890928 /* UITouch-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A39B1EFF0ED4F09EB5C4F0510AC5C22 /* UITouch-KIFAdditions.h */; };
-		8560257B04499AF1B4D2A34C9E609CDD /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829AE989ED85CA465B09B318E12F940 /* Pods-dummy.m */; };
-		856FC83661F62C9FFB8FBC7DE1C2ACDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F967621522F40F2BFAA227BB8802AC4F /* Foundation.framework */; };
-		8776DC7EDE63BF9CFC29A58E554AA90C /* OMChainWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 38853E71AD54731741B9785FCB99169C /* OMChainWallet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9084575F7B98F0F28FC3FD15D23D9665 /* KIFUITestActor-ConditionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D7812C0CD2F9C83CF8C95938966F0 /* KIFUITestActor-ConditionalTests.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9261B3EAB026AE5B73C93E1D7CE7F8E5 /* KIFTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C86ACBBF7FBB73E4495CFE2D881E1AF /* KIFTestCase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		00FBF39851F4D5526DF87D50ABF891B3 /* KIFUITestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5FE3A3FF803C70E6009B01205A3C0E /* KIFUITestActor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		02EB16B1E400B130E852348F38794710 /* NSBundle-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3772E4B9346E2437CD627A1E674286AD /* NSBundle-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0C21AFD230798C240DC3A9A8F6C58EE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23E418010ED201101AE18E1B391B2C2 /* Foundation.framework */; };
+		0C64685703A612AA1C78D4229632989E /* UIScrollView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D2444A5FC5E2FDB2B2F57CEE216416D2 /* UIScrollView-KIFAdditions.h */; };
+		12ECE086472F366631CCBB32043395D0 /* UIView-Debugging.m in Sources */ = {isa = PBXBuildFile; fileRef = 87277FFDD0EA95BB4251714437731CC7 /* UIView-Debugging.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		18C384B4EFFCF267D2D7DA78CA4CDB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23E418010ED201101AE18E1B391B2C2 /* Foundation.framework */; };
+		1937D9EFC363B8A32EB4173C537043D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23E418010ED201101AE18E1B391B2C2 /* Foundation.framework */; };
+		1ACA830E13F2BB26B150DB83FCFC3AA8 /* OMChainWallet.h in Headers */ = {isa = PBXBuildFile; fileRef = 238696DECCE5DC6CF3C8A9DD33063711 /* OMChainWallet.h */; };
+		1FA2E89E3574B51BCB08D75FAC6314AC /* UIScrollView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B46E2B5522F09D7F6F54936F93B503E /* UIScrollView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2180D341A4551BE095CCF237D1E682EE /* NSException-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F63E5FB9D11C948D4A4EF97BEC2A52D7 /* NSException-KIFAdditions.h */; };
+		21F053B1B7E863F47709DB24DA04A7AB /* UITouch-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7915133C5A23C574D9EEFB711D097A4B /* UITouch-KIFAdditions.h */; };
+		260DAD8581B2AFF0B32CB8643A4E0433 /* NSError-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCD274AC5423CBBD870EEB445948C7A /* NSError-KIFAdditions.h */; };
+		267B73EA9400F6C003EB97D31F9BCC4C /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEECBE3DF4E6A6DE4CCA2B33E0048A9F /* Pods-dummy.m */; };
+		268C064F8EBD4D11B55DAB08068E9BB1 /* UIEvent+KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2CF1FA339385BA37E53B22AD8708A5 /* UIEvent+KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2C0B514FED596DFF0C8071CDAA4BD52E /* UIWindow-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D60DB5A7F5C2BBA241EE1A7B3A0460CC /* UIWindow-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2F69221A6922EBF3610866886382B6D0 /* KIF.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6213DA0F1CF91C3C1BF0CCB92BB373 /* KIF.h */; };
+		322724FCBCA25B6F362ED465CBF7816F /* OMChainAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD5EBC01C0EC44F7E73F4A81FA73DD2 /* OMChainAddress.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		32F39BF1AD796CB80C1FA84FC252A2F7 /* UIAccessibilityElement-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA121AF7008B68D1A1DDB02DFFF851FA /* UIAccessibilityElement-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		34602BD61C4BF92968DF4D0C70860495 /* OMChainTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B82908560E82FEC660CEBD9F0EBCD36 /* OMChainTransaction.h */; };
+		3A1A57D547677825BAB0A5ECC659588C /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 55FF90CC6C771E38A010F3847C6549A0 /* SSKeychainQuery.h */; };
+		3A710246CD13814225AE0E39B74EEAEB /* NSFileManager-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 64668C0FE6890DA9F219FFC33726C04E /* NSFileManager-KIFAdditions.h */; };
+		3F79319DD41E9C0E9F3D33C739F1661C /* KIFUITestActor-ConditionalTests.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D7BE47B1DC060197FE4E4F33559984 /* KIFUITestActor-ConditionalTests.h */; };
+		430242C75A9470DA9C900714535D400B /* OMChainWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3A6D65F3B419CD4A8B369741A5A55 /* OMChainWallet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		462F21E42957D404339DE6CD6B2962CC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D926D42C7792BB387E10B572EE720E9 /* Security.framework */; };
+		4A951E3B6C1A2D40713DCF62F96955D2 /* XCTestCase-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB56F50256E86C97BA6B90EFDA333D9 /* XCTestCase-KIFAdditions.h */; };
+		4ABC5C1C294DED0E5EE41FDACF9F1E14 /* IOHIDEvent+KIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 59930583BC2CCA7DA127024F982E426D /* IOHIDEvent+KIF.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4F722C1F6D306B41ABDF124C39D4BC7A /* NSFileManager-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846656CBF80F6E8C178903CF3F0508D /* NSFileManager-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		66F9F4ADDC964ABEAC484C32C5D83233 /* KIFSystemTestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C7A174045E2F7D6958A1160C9E17B8 /* KIFSystemTestActor.h */; };
+		70E0C84CA0631706DC2A33DBA875CECC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EFA00B8A14514A7CC264EA5F956830 /* IOKit.framework */; };
+		744B5610484DDEB1F440DE49EBBFBAA5 /* UIView-Debugging.h in Headers */ = {isa = PBXBuildFile; fileRef = 5365C772FFE7C42D1A228FE01685A47C /* UIView-Debugging.h */; };
+		77536DA183705FF61EC10E108212E5F5 /* LoadableCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = D40433892EE89C586736AD6F861CFB73 /* LoadableCategory.h */; };
+		77A359E99863C8F4888883335CBA1578 /* CGGeometry-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 21E276C3309EB24767F132C455DE5E90 /* CGGeometry-KIFAdditions.h */; };
+		7A5D59914842D36BBD575691E66FD568 /* UIEvent+KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 281616A8E8E66924F3BB9991D4C93572 /* UIEvent+KIFAdditions.h */; };
+		7AC5803DBE5BFA42C0DFFD7CB586AE58 /* KIFTypist.h in Headers */ = {isa = PBXBuildFile; fileRef = BB81A4654FD083EE3CE01DE5F0DAEF8E /* KIFTypist.h */; };
+		7B553E7586BA37E96F04940B518D8BCA /* UIAccessibilityElement-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EB7BAD162F96E9569F92B69796EA8C11 /* UIAccessibilityElement-KIFAdditions.h */; };
+		7DC212DF2B490D950A6010831EF5DA88 /* UIAutomationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B01A804E1C78C424DDE981D4FEB032 /* UIAutomationHelper.h */; };
+		80995B84AD979B943E9EF14462B9FB62 /* OMChainTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D19F27A95E5164C40F5ABCB92AEA3 /* OMChainTransaction.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		81DD88EF201714C866113865668F0177 /* UIView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AD70D5CF195DBFBE19E5B1BD1C12CB30 /* UIView-KIFAdditions.h */; };
+		83926000338FC679DB3D98F38D812093 /* UITableView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5232297266B1B2B5E74E92C102F742A4 /* UITableView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		86F46775A5E14470B4E0C3FC80A1136C /* OMChainAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = C28698A5CEE131A9F8FD7671FB2BC151 /* OMChainAddress.h */; };
+		9152FD4F547A0F23E136CD10B1399B44 /* KIFTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = A1707A453FED535709A778102E28B06A /* KIFTestCase.h */; };
+		9565EF35D698AB5AA24F49E562BB7272 /* KIFTestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = EE34350422AC85D366679A9C5F7A3599 /* KIFTestActor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		99BB4DFC2C905BABD2B15A2F8B1C19D1 /* Pods-UI Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 767499DCDD1A1371B9A6C4BA62E4B5F7 /* Pods-UI Tests-dummy.m */; };
-		9C55546925DE2407A0954EF17FC4DBCB /* KIFSystemTestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F5F3373C611680DB93ED860A483121 /* KIFSystemTestActor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9D5C47E9237B595006BF26B455859A52 /* KIFUITestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = CB140C41323F42A4970794DB3917AC55 /* KIFUITestActor.h */; };
-		9E3516CB92E2A768DAFD5AE6A561C5F3 /* UIApplication-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A04004A2C04D9D3F79CACFE4B75191 /* UIApplication-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A53362DFE1A68027A6A343845893991C /* KIF.h in Headers */ = {isa = PBXBuildFile; fileRef = FF0D8F8F7C8A50B89B947A4146AA041C /* KIF.h */; };
-		A70556E4C5536AE5A5E5E68FA89EEE8B /* OMChainKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E771486069CDD29BC2E6237AD5B7EBAE /* OMChainKit-dummy.m */; };
-		A7314204EBF141A6C6205FEF7EF64616 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5D951A39D8B0F658F8A69D2D0C1EA1 /* CoreGraphics.framework */; };
-		A79E6FED9E7CBBF2EF2D8B79565242DA /* OMChainTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA4A596B04206E4A09ADA70A6541A43 /* OMChainTransaction.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AA02230F75D1B522FBB0E89658496C92 /* UIView-Debugging.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CD4E645517EE798C47EEC5616226F8 /* UIView-Debugging.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		ACE3CD91D4041D37A8E52FD268A9D38C /* UIView-Debugging.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C4C73EFE763A4D3BDB6A240494EC678 /* UIView-Debugging.h */; };
-		AD80D80177CE10B6977A26BFE482E9DF /* CGGeometry-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FAD1B94F56BFC04F05910689AC1580 /* CGGeometry-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AFFC26FCE4C24612FF5675208E2BC9AD /* OMChainWallet.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B61F70E69E20D350657BAD526ACABE /* OMChainWallet.h */; };
-		B13714F8648CF04C7CFD7CFE0804F260 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33081EB58FEE91E3BBF3E078C569B41 /* IOKit.framework */; };
-		B777C53BB9C90643BE5F25B6AE5390BB /* XCTestCase-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C57BD5A8238C03BB74D2DD5555A91869 /* XCTestCase-KIFAdditions.h */; };
-		BC0A6C086156A0A33D5C542AA3BEBCFD /* KIF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F60E8ADB87A320AF90270EEEF3E18E2 /* KIF-dummy.m */; };
-		BC6043540EB574B4C00FF2E0C76498B8 /* UITableView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AFB77B7A065C4AE7D1C7B9F5BDB323 /* UITableView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BD2C2C7ACA92F1AD98883199A1FEB8BD /* NSBundle-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DBDBF00F44CFF4B285FCD9D8E262AF /* NSBundle-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C6B320777EBA8A746DE4AE96F929AA03 /* NSError-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DE82AC2F777BD2653859EB2E8CEB4FE4 /* NSError-KIFAdditions.h */; };
-		D16D0A6F9A27D3E1181E1EEB701E7AF6 /* KIFTypist.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B43C4F81C2B73B583134B6B40D334 /* KIFTypist.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D2771477AB1BC0AE562D1590CE4F6286 /* UIApplication-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E54F2E880B49F8A16AF37CD90D89E79 /* UIApplication-KIFAdditions.h */; };
-		D82DB45FA10D15AB9A2756C0D8CFF1B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F967621522F40F2BFAA227BB8802AC4F /* Foundation.framework */; };
-		E0C484D17B55DA5FC0502A9E975923A3 /* KIFTypist.h in Headers */ = {isa = PBXBuildFile; fileRef = 891A33FEB647BBEC44937383260EBE09 /* KIFTypist.h */; };
-		E3BC8B1AEE2A463F70BB251F092D4E28 /* UIAutomationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 487AE2B0D0B17B1318D745200B0387BB /* UIAutomationHelper.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E9F7BDDDEBF4E11F9B6873718AD7C578 /* IOHIDEvent+KIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 49555311254F61B6DEFA12328499C70B /* IOHIDEvent+KIF.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EA2F8CF485A8286AB39ADBEA121862D2 /* UIAccessibilityElement-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE645D4F88509B42337FF84F78AF3E9 /* UIAccessibilityElement-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F075A1A1DB0CC22D75D93345849F72C0 /* UIEvent+KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 403F8B353391F87CC25171A596A13EB6 /* UIEvent+KIFAdditions.h */; };
-		F11E72D1AC46EBCD4193B80F3A323D4E /* UITouch-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5D4DB358B5B6CA58FB6005881218E /* UITouch-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FA6ED4D30896EDB7A7B4196CE63CCB8C /* KIFUITestActor-ConditionalTests.h in Headers */ = {isa = PBXBuildFile; fileRef = C568F03A5789653F08E3C9C9E77E61E8 /* KIFUITestActor-ConditionalTests.h */; };
-		FD227A6E0D8009342783F3A29DBD5101 /* NSException-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 16921197ADA03418A28885AB16AAD3CF /* NSException-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9DDBB4D12E72C19CB44B5E191C8DA529 /* KIFUITestActor-ConditionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22872AA0B2F53B7932212F3B4A1EDD76 /* KIFUITestActor-ConditionalTests.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9F7DA9EDBCD0D59F679C06CA25CD260D /* KIFTestStepValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE01D9CFB68E4132C3B91F3D21A096F /* KIFTestStepValidation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A12AB3F5489C96DD71C53C148628DFA3 /* KIFTestStepValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D03F470D6CFEF31C78B4E0FF28847FA /* KIFTestStepValidation.h */; };
+		ADB16D3138A236357D5292E2564B419B /* NSBundle-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F749398F386539E2DD3E432EE0CDFAE /* NSBundle-KIFAdditions.h */; };
+		AE2F61B70564FEC3DF0E3B54AA3638A3 /* KIFTestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 569FDF606EA3912332949D1F7341E011 /* KIFTestActor.h */; };
+		AF01358DD5086E5D4A57E9D54F6372E6 /* KIFTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F1B9C1CC3876570A8534E848787181 /* KIFTestCase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AFDE998B0D11DDFD8DBCDCF2DFA8BEB8 /* UIApplication-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A0E09FC80B29EE54F885059954D1B2 /* UIApplication-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B3058829A9602981EF6D551821EF5166 /* NSException-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC2D6B36549D0C1A62EE1CD8ADD185D /* NSException-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B7A7A0A1DC0EAAEB136D7B5C54E75701 /* UITableView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 37E2564248E8647CC434436DA1761B1A /* UITableView-KIFAdditions.h */; };
+		BACE2EB19901EACB2B14094251D2777F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23E418010ED201101AE18E1B391B2C2 /* Foundation.framework */; };
+		BFBD693993A6E8CDE2C2CD711974D172 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FAEC20AF00346950137F85B562F28C /* XCTest.framework */; };
+		C30A70763A5BFDD53DC3321408EC5879 /* XCTestCase-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E0F43831D0DB904E74E713F741ADC2 /* XCTestCase-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C3D98095FE415220D79D962CCD6C81E9 /* OMChainKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8232E27DA7B10FE2EF4E1471ACFDAEF6 /* OMChainKit-dummy.m */; };
+		C448ED2A47CCE08BC5116C230CAD58B9 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = D5339C0A8023DA78A483A1DFEB5EF68B /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C4B2052206136800B304F0EA0560030D /* UITouch-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 919FE1AE7FCDCE1B2705E97C838F8BF1 /* UITouch-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CF38136B5D6CF5631498D21F1C1F8E7D /* IOHIDEvent+KIF.h in Headers */ = {isa = PBXBuildFile; fileRef = A51D76FB8B288D03D26AC339ED2B5BB8 /* IOHIDEvent+KIF.h */; };
+		CF85BB5F573E6066871F14A011F42E3B /* SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD360DC39ED57B904797540B29D333B /* SSKeychain-dummy.m */; };
+		D0C276BE14E97B62E2ED80D2326BA96A /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A8244AB0E0D8E13DB84AE8F420CB1945 /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D21E6423687AD049C9388CD0A40426DC /* UIAutomationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8457406BFB5A5E344AF18B67E29401 /* UIAutomationHelper.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D2D954793CCE5C4A024FEAB469BAB347 /* UIWindow-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DA26E16FDE0C430C7DAD0CD3C41CE8D /* UIWindow-KIFAdditions.h */; };
+		D348A7CC3FDB37C44B89F5BFDAB22F72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66091D70910F82F03D1BD5EFE1426AB5 /* CoreGraphics.framework */; };
+		D5B80D26738A3289BF9767451422840B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23E418010ED201101AE18E1B391B2C2 /* Foundation.framework */; };
+		D7B30602301EA047151657082AE8B208 /* CGGeometry-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E04DAF78B89BC466572909636559C6 /* CGGeometry-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DA9D665977EB83478870CACE93AA141C /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A573E3C50215EE6D076255EFEF0D93B /* SSKeychain.h */; };
+		DCB3FAE7093BA18692D5BA73092431FF /* KIFTypist.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC97B513BF8CB788000C9CD63800499 /* KIFTypist.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EFE384390A31BC0E707A00F32BE4CE55 /* NSError-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD303CD65AFB01BDB4FC7B1A0B27545 /* NSError-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F2DE77EB8A0A009554F59A5E511CACAD /* KIFUITestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 70B3DEBBEC9CCBEB376742C015A1F044 /* KIFUITestActor.h */; };
+		F571C90157088F5679243334CBD3EAAC /* UIApplication-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 50195433C374A1D96684C1D2ED75FC07 /* UIApplication-KIFAdditions.h */; };
+		F63245856E3DB4135D57E386B865D033 /* UIView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C3439F76DC614FCAB65C0906B2AAE9D8 /* UIView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F8C4E5B486A43D1CF9391729195380A9 /* KIF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E14B6CCEE463720851D62E790C343C5 /* KIF-dummy.m */; };
+		F989D87AA40D33DE47A3F8867C165A40 /* KIFSystemTestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD3C82A051D55102BA634D4DC1949F8 /* KIFSystemTestActor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B9E4F917A59C3BCDCB13C62C5BCFC0F /* PBXContainerItemProxy */ = {
+		A55F61227639BAF776F6892CD6347D22 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A56259F1DA0D7AF62AC596AEC760642D;
-			remoteInfo = OMChainKit;
+			remoteGlobalIDString = EA3931D121EE165685E6E6C251F033C0;
+			remoteInfo = SSKeychain;
 		};
-		98900EA3921D01ADF2D0ADBE896F4D90 /* PBXContainerItemProxy */ = {
+		BDB6948482F2653E70DAE321B64C1775 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 12AE659CA3A1E74ACCD67AB5373CF02D;
+			remoteGlobalIDString = 5015A26F131A3062F3B93FE02DFBE7F8;
 			remoteInfo = KIF;
+		};
+		EB4BF46E1B681A98FAE708BCE5B23314 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BE51938AB8048230A668768BD8414AE;
+			remoteInfo = OMChainKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09F5F3373C611680DB93ED860A483121 /* KIFSystemTestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFSystemTestActor.m; path = Classes/KIFSystemTestActor.m; sourceTree = "<group>"; };
-		11E19A352DE4886008E5AF8F756DE43C /* OMChainKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMChainKit-prefix.pch"; sourceTree = "<group>"; };
-		121B5C9B0C2B324E48DB2130D1F5AF50 /* libKIF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKIF.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		12768BF3395ADDE4BC1A9A5F33C9259B /* NSBundle-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle-KIFAdditions.h"; path = "Additions/NSBundle-KIFAdditions.h"; sourceTree = "<group>"; };
-		13AFB77B7A065C4AE7D1C7B9F5BDB323 /* UITableView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView-KIFAdditions.m"; path = "Additions/UITableView-KIFAdditions.m"; sourceTree = "<group>"; };
-		14EBC199870A6F6A04E79684D80C0C17 /* UIAccessibilityElement-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAccessibilityElement-KIFAdditions.h"; path = "Additions/UIAccessibilityElement-KIFAdditions.h"; sourceTree = "<group>"; };
-		16921197ADA03418A28885AB16AAD3CF /* NSException-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSException-KIFAdditions.m"; path = "Additions/NSException-KIFAdditions.m"; sourceTree = "<group>"; };
-		1829AE989ED85CA465B09B318E12F940 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		098FAF552509FE9830B12345EB012838 /* OMChainKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OMChainKit-Private.xcconfig"; sourceTree = "<group>"; };
+		0B5FE3A3FF803C70E6009B01205A3C0E /* KIFUITestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFUITestActor.m; path = Classes/KIFUITestActor.m; sourceTree = "<group>"; };
+		0D926D42C7792BB387E10B572EE720E9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		1846656CBF80F6E8C178903CF3F0508D /* NSFileManager-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager-KIFAdditions.m"; path = "Additions/NSFileManager-KIFAdditions.m"; sourceTree = "<group>"; };
 		1C15A62FD7AC6272D999EF028DDDAD61 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		1C4C73EFE763A4D3BDB6A240494EC678 /* UIView-Debugging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView-Debugging.h"; path = "Additions/UIView-Debugging.h"; sourceTree = "<group>"; };
-		1C86ACBBF7FBB73E4495CFE2D881E1AF /* KIFTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestCase.m; path = Classes/KIFTestCase.m; sourceTree = "<group>"; };
-		1CB5D4DB358B5B6CA58FB6005881218E /* UITouch-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITouch-KIFAdditions.m"; path = "Additions/UITouch-KIFAdditions.m"; sourceTree = "<group>"; };
+		1C8457406BFB5A5E344AF18B67E29401 /* UIAutomationHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIAutomationHelper.m; path = Classes/UIAutomationHelper.m; sourceTree = "<group>"; };
+		1CD5EBC01C0EC44F7E73F4A81FA73DD2 /* OMChainAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMChainAddress.m; path = OMChainKit/OMChainKit/Source/OMChainAddress.m; sourceTree = "<group>"; };
 		1DC78DD163BDB445A2B91A656B87CF7F /* libPods-UI Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UI Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E54F2E880B49F8A16AF37CD90D89E79 /* UIApplication-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication-KIFAdditions.h"; path = "Additions/UIApplication-KIFAdditions.h"; sourceTree = "<group>"; };
-		1EBDE1E35FE878155EF9FB78E5F3CCCF /* NSFileManager-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager-KIFAdditions.h"; path = "Additions/NSFileManager-KIFAdditions.h"; sourceTree = "<group>"; };
-		2926C3C42FF2313D762862D7AC1B9D81 /* KIFTestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestActor.h; path = Classes/KIFTestActor.h; sourceTree = "<group>"; };
-		2B022B6A6430F39961EBB676F6230AE1 /* UIWindow-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow-KIFAdditions.h"; path = "Additions/UIWindow-KIFAdditions.h"; sourceTree = "<group>"; };
-		2C4D7812C0CD2F9C83CF8C95938966F0 /* KIFUITestActor-ConditionalTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "KIFUITestActor-ConditionalTests.m"; path = "Classes/KIFUITestActor-ConditionalTests.m"; sourceTree = "<group>"; };
-		308C29BDF7FF5EC7A58917140D0360DB /* NSFileManager-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager-KIFAdditions.m"; path = "Additions/NSFileManager-KIFAdditions.m"; sourceTree = "<group>"; };
-		336C64A2C9E38A34539807FC54CFD717 /* KIFTestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestActor.m; path = Classes/KIFTestActor.m; sourceTree = "<group>"; };
-		38853E71AD54731741B9785FCB99169C /* OMChainWallet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMChainWallet.m; path = OMChainKit/OMChainKit/Source/OMChainWallet.m; sourceTree = "<group>"; };
-		38B61F70E69E20D350657BAD526ACABE /* OMChainWallet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMChainWallet.h; path = OMChainKit/OMChainKit/Source/OMChainWallet.h; sourceTree = "<group>"; };
-		3A0F3139D85E3B0E31749D9EFDF274F6 /* UIEvent+KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIEvent+KIFAdditions.m"; path = "Additions/UIEvent+KIFAdditions.m"; sourceTree = "<group>"; };
-		3A39B1EFF0ED4F09EB5C4F0510AC5C22 /* UITouch-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITouch-KIFAdditions.h"; path = "Additions/UITouch-KIFAdditions.h"; sourceTree = "<group>"; };
-		3FAA6C3B202FD5E36051E92D3501DEFF /* NSError-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError-KIFAdditions.m"; path = "Additions/NSError-KIFAdditions.m"; sourceTree = "<group>"; };
-		403F8B353391F87CC25171A596A13EB6 /* UIEvent+KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIEvent+KIFAdditions.h"; path = "Additions/UIEvent+KIFAdditions.h"; sourceTree = "<group>"; };
-		42BEF5CFFBC166FE0D5C45AF313D807C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		47C4BFD5CF00E743446537C1497D3EAD /* KIF-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "KIF-Private.xcconfig"; sourceTree = "<group>"; };
+		1E14B6CCEE463720851D62E790C343C5 /* KIF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KIF-dummy.m"; sourceTree = "<group>"; };
+		21E276C3309EB24767F132C455DE5E90 /* CGGeometry-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CGGeometry-KIFAdditions.h"; path = "Additions/CGGeometry-KIFAdditions.h"; sourceTree = "<group>"; };
+		22872AA0B2F53B7932212F3B4A1EDD76 /* KIFUITestActor-ConditionalTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "KIFUITestActor-ConditionalTests.m"; path = "Classes/KIFUITestActor-ConditionalTests.m"; sourceTree = "<group>"; };
+		238696DECCE5DC6CF3C8A9DD33063711 /* OMChainWallet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMChainWallet.h; path = OMChainKit/OMChainKit/Source/OMChainWallet.h; sourceTree = "<group>"; };
+		281616A8E8E66924F3BB9991D4C93572 /* UIEvent+KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIEvent+KIFAdditions.h"; path = "Additions/UIEvent+KIFAdditions.h"; sourceTree = "<group>"; };
+		2C1D19F27A95E5164C40F5ABCB92AEA3 /* OMChainTransaction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMChainTransaction.m; path = OMChainKit/OMChainKit/Source/OMChainTransaction.m; sourceTree = "<group>"; };
+		2DA26E16FDE0C430C7DAD0CD3C41CE8D /* UIWindow-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow-KIFAdditions.h"; path = "Additions/UIWindow-KIFAdditions.h"; sourceTree = "<group>"; };
+		3772E4B9346E2437CD627A1E674286AD /* NSBundle-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle-KIFAdditions.m"; path = "Additions/NSBundle-KIFAdditions.m"; sourceTree = "<group>"; };
+		37E2564248E8647CC434436DA1761B1A /* UITableView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView-KIFAdditions.h"; path = "Additions/UITableView-KIFAdditions.h"; sourceTree = "<group>"; };
+		3A573E3C50215EE6D076255EFEF0D93B /* SSKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
 		47CF5DA48D575170B2F8E7A771A9CA4A /* Pods-UI Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UI Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		487AE2B0D0B17B1318D745200B0387BB /* UIAutomationHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIAutomationHelper.m; path = Classes/UIAutomationHelper.m; sourceTree = "<group>"; };
-		49555311254F61B6DEFA12328499C70B /* IOHIDEvent+KIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IOHIDEvent+KIF.m"; path = "Classes/IOHIDEvent+KIF.m"; sourceTree = "<group>"; };
-		55A04004A2C04D9D3F79CACFE4B75191 /* UIApplication-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication-KIFAdditions.m"; path = "Additions/UIApplication-KIFAdditions.m"; sourceTree = "<group>"; };
-		6012E12F6DB87EEC04CB9869F27843B6 /* KIFTestStepValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestStepValidation.h; path = Classes/KIFTestStepValidation.h; sourceTree = "<group>"; };
-		615CE78BC4D103991DBCA0B85A2D4AD9 /* CGGeometry-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CGGeometry-KIFAdditions.h"; path = "Additions/CGGeometry-KIFAdditions.h"; sourceTree = "<group>"; };
-		62F1CA69BE1DAB8D1AA19CEEC63FBAC7 /* UIView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView-KIFAdditions.h"; path = "Additions/UIView-KIFAdditions.h"; sourceTree = "<group>"; };
-		64C19BD1F9BF94EB0B9A057DFE0D520F /* KIF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KIF-prefix.pch"; sourceTree = "<group>"; };
-		692756EBDD7DDDC1B0F48930371DB7B3 /* LoadableCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LoadableCategory.h; path = Additions/LoadableCategory.h; sourceTree = "<group>"; };
-		6BAC3EF9310D711ADCF2FF9131C91A5D /* XCTestCase-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase-KIFAdditions.m"; path = "Additions/XCTestCase-KIFAdditions.m"; sourceTree = "<group>"; };
-		6D508C37686C488D2FFD9562EE227740 /* KIFUITestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFUITestActor.m; path = Classes/KIFUITestActor.m; sourceTree = "<group>"; };
-		6DA4A596B04206E4A09ADA70A6541A43 /* OMChainTransaction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMChainTransaction.m; path = OMChainKit/OMChainKit/Source/OMChainTransaction.m; sourceTree = "<group>"; };
+		4AC2D6B36549D0C1A62EE1CD8ADD185D /* NSException-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSException-KIFAdditions.m"; path = "Additions/NSException-KIFAdditions.m"; sourceTree = "<group>"; };
+		4B46E2B5522F09D7F6F54936F93B503E /* UIScrollView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView-KIFAdditions.m"; path = "Additions/UIScrollView-KIFAdditions.m"; sourceTree = "<group>"; };
+		50195433C374A1D96684C1D2ED75FC07 /* UIApplication-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication-KIFAdditions.h"; path = "Additions/UIApplication-KIFAdditions.h"; sourceTree = "<group>"; };
+		5232297266B1B2B5E74E92C102F742A4 /* UITableView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView-KIFAdditions.m"; path = "Additions/UITableView-KIFAdditions.m"; sourceTree = "<group>"; };
+		5365C772FFE7C42D1A228FE01685A47C /* UIView-Debugging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView-Debugging.h"; path = "Additions/UIView-Debugging.h"; sourceTree = "<group>"; };
+		55FAEC20AF00346950137F85B562F28C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		55FF90CC6C771E38A010F3847C6549A0 /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
+		569FDF606EA3912332949D1F7341E011 /* KIFTestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestActor.h; path = Classes/KIFTestActor.h; sourceTree = "<group>"; };
+		59930583BC2CCA7DA127024F982E426D /* IOHIDEvent+KIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IOHIDEvent+KIF.m"; path = "Classes/IOHIDEvent+KIF.m"; sourceTree = "<group>"; };
+		5DB56F50256E86C97BA6B90EFDA333D9 /* XCTestCase-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTestCase-KIFAdditions.h"; path = "Additions/XCTestCase-KIFAdditions.h"; sourceTree = "<group>"; };
+		5DE01D9CFB68E4132C3B91F3D21A096F /* KIFTestStepValidation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestStepValidation.m; path = Classes/KIFTestStepValidation.m; sourceTree = "<group>"; };
+		64668C0FE6890DA9F219FFC33726C04E /* NSFileManager-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager-KIFAdditions.h"; path = "Additions/NSFileManager-KIFAdditions.h"; sourceTree = "<group>"; };
+		66091D70910F82F03D1BD5EFE1426AB5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		6D03F470D6CFEF31C78B4E0FF28847FA /* KIFTestStepValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestStepValidation.h; path = Classes/KIFTestStepValidation.h; sourceTree = "<group>"; };
+		6F749398F386539E2DD3E432EE0CDFAE /* NSBundle-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle-KIFAdditions.h"; path = "Additions/NSBundle-KIFAdditions.h"; sourceTree = "<group>"; };
+		70B3DEBBEC9CCBEB376742C015A1F044 /* KIFUITestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFUITestActor.h; path = Classes/KIFUITestActor.h; sourceTree = "<group>"; };
+		73E04DAF78B89BC466572909636559C6 /* CGGeometry-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CGGeometry-KIFAdditions.m"; path = "Additions/CGGeometry-KIFAdditions.m"; sourceTree = "<group>"; };
+		74C7A174045E2F7D6958A1160C9E17B8 /* KIFSystemTestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFSystemTestActor.h; path = Classes/KIFSystemTestActor.h; sourceTree = "<group>"; };
 		767499DCDD1A1371B9A6C4BA62E4B5F7 /* Pods-UI Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UI Tests-dummy.m"; sourceTree = "<group>"; };
-		7C5D951A39D8B0F658F8A69D2D0C1EA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		7D3627F5D567BB7A434476C2F6B58E78 /* OMChainAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMChainAddress.h; path = OMChainKit/OMChainKit/Source/OMChainAddress.h; sourceTree = "<group>"; };
-		7EE645D4F88509B42337FF84F78AF3E9 /* UIAccessibilityElement-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAccessibilityElement-KIFAdditions.m"; path = "Additions/UIAccessibilityElement-KIFAdditions.m"; sourceTree = "<group>"; };
-		7F60E8ADB87A320AF90270EEEF3E18E2 /* KIF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KIF-dummy.m"; sourceTree = "<group>"; };
-		868DB02CFC16E5AB9A5EC6F67DEF4085 /* OMChainTransaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMChainTransaction.h; path = OMChainKit/OMChainKit/Source/OMChainTransaction.h; sourceTree = "<group>"; };
-		891A33FEB647BBEC44937383260EBE09 /* KIFTypist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTypist.h; path = Classes/KIFTypist.h; sourceTree = "<group>"; };
-		9015EE04064BC77D469EC92FFE434B60 /* UIWindow-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow-KIFAdditions.m"; path = "Additions/UIWindow-KIFAdditions.m"; sourceTree = "<group>"; };
-		918EAD2CE95E47291559D83E14527E07 /* UIScrollView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView-KIFAdditions.h"; path = "Additions/UIScrollView-KIFAdditions.h"; sourceTree = "<group>"; };
+		76A0D5C770CFC0DE42B1D378399E09FD /* KIF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KIF.xcconfig; sourceTree = "<group>"; };
+		76E0F43831D0DB904E74E713F741ADC2 /* XCTestCase-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase-KIFAdditions.m"; path = "Additions/XCTestCase-KIFAdditions.m"; sourceTree = "<group>"; };
+		7915133C5A23C574D9EEFB711D097A4B /* UITouch-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITouch-KIFAdditions.h"; path = "Additions/UITouch-KIFAdditions.h"; sourceTree = "<group>"; };
+		7B82908560E82FEC660CEBD9F0EBCD36 /* OMChainTransaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMChainTransaction.h; path = OMChainKit/OMChainKit/Source/OMChainTransaction.h; sourceTree = "<group>"; };
+		7CD3C82A051D55102BA634D4DC1949F8 /* KIFSystemTestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFSystemTestActor.m; path = Classes/KIFSystemTestActor.m; sourceTree = "<group>"; };
+		7DCD274AC5423CBBD870EEB445948C7A /* NSError-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError-KIFAdditions.h"; path = "Additions/NSError-KIFAdditions.h"; sourceTree = "<group>"; };
+		8232E27DA7B10FE2EF4E1471ACFDAEF6 /* OMChainKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OMChainKit-dummy.m"; sourceTree = "<group>"; };
+		87277FFDD0EA95BB4251714437731CC7 /* UIView-Debugging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView-Debugging.m"; path = "Additions/UIView-Debugging.m"; sourceTree = "<group>"; };
+		8847AB64BD4464CB8A3DCA36DE616347 /* SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-prefix.pch"; sourceTree = "<group>"; };
+		88EFA00B8A14514A7CC264EA5F956830 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A3F51BB2D925B9D90FE975A908EF37E /* KIF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KIF-prefix.pch"; sourceTree = "<group>"; };
+		8DC3A6D65F3B419CD4A8B369741A5A55 /* OMChainWallet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMChainWallet.m; path = OMChainKit/OMChainKit/Source/OMChainWallet.m; sourceTree = "<group>"; };
+		8FD360DC39ED57B904797540B29D333B /* SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain-dummy.m"; sourceTree = "<group>"; };
+		919FE1AE7FCDCE1B2705E97C838F8BF1 /* UITouch-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITouch-KIFAdditions.m"; path = "Additions/UITouch-KIFAdditions.m"; sourceTree = "<group>"; };
 		937828FF3698C74BA21D1070B3860A0E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A0215C382AF8766A5B7C7EC2E7F70EA0 /* KIF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KIF.xcconfig; sourceTree = "<group>"; };
-		A4EF9E5F3F1E9FDA9B3A5961450542CA /* UIView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView-KIFAdditions.m"; path = "Additions/UIView-KIFAdditions.m"; sourceTree = "<group>"; };
-		A64D5B1AE645922540CFEDE39A2EDD3F /* NSException-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSException-KIFAdditions.h"; path = "Additions/NSException-KIFAdditions.h"; sourceTree = "<group>"; };
+		A1707A453FED535709A778102E28B06A /* KIFTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestCase.h; path = Classes/KIFTestCase.h; sourceTree = "<group>"; };
+		A51D76FB8B288D03D26AC339ED2B5BB8 /* IOHIDEvent+KIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IOHIDEvent+KIF.h"; path = "Classes/IOHIDEvent+KIF.h"; sourceTree = "<group>"; };
+		A7D7BE47B1DC060197FE4E4F33559984 /* KIFUITestActor-ConditionalTests.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KIFUITestActor-ConditionalTests.h"; path = "Classes/KIFUITestActor-ConditionalTests.h"; sourceTree = "<group>"; };
+		A7F1B9C1CC3876570A8534E848787181 /* KIFTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestCase.m; path = Classes/KIFTestCase.m; sourceTree = "<group>"; };
+		A8244AB0E0D8E13DB84AE8F420CB1945 /* SSKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
 		A8A2ACF944DA21C5439B1C3A532F9356 /* Pods-UI Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UI Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B2DBDBF00F44CFF4B285FCD9D8E262AF /* NSBundle-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle-KIFAdditions.m"; path = "Additions/NSBundle-KIFAdditions.m"; sourceTree = "<group>"; };
-		B62DC075A998EA0D0CF9AB858651B9FE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B6B13DBE93614A4B2CA1CEE77CA4AD7F /* libOMChainKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOMChainKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B73F092AFC78FD973E6ABF1B991F2D45 /* IOHIDEvent+KIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IOHIDEvent+KIF.h"; path = "Classes/IOHIDEvent+KIF.h"; sourceTree = "<group>"; };
+		AD70D5CF195DBFBE19E5B1BD1C12CB30 /* UIView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView-KIFAdditions.h"; path = "Additions/UIView-KIFAdditions.h"; sourceTree = "<group>"; };
+		B0A0E09FC80B29EE54F885059954D1B2 /* UIApplication-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication-KIFAdditions.m"; path = "Additions/UIApplication-KIFAdditions.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BA6D87FFEA9EE3040867CBC1474E7A2C /* Pods-UI Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UI Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BD37FEF0A1FB867E04DA2722A3DCB0FD /* KIFTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestCase.h; path = Classes/KIFTestCase.h; sourceTree = "<group>"; };
-		BFB6226A09EBA97F47A73A19161CBEEE /* UIScrollView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView-KIFAdditions.m"; path = "Additions/UIScrollView-KIFAdditions.m"; sourceTree = "<group>"; };
+		BB81A4654FD083EE3CE01DE5F0DAEF8E /* KIFTypist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTypist.h; path = Classes/KIFTypist.h; sourceTree = "<group>"; };
+		BBD303CD65AFB01BDB4FC7B1A0B27545 /* NSError-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError-KIFAdditions.m"; path = "Additions/NSError-KIFAdditions.m"; sourceTree = "<group>"; };
+		BD6213DA0F1CF91C3C1BF0CCB92BB373 /* KIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIF.h; path = Classes/KIF.h; sourceTree = "<group>"; };
 		C067D375412C8D09B6C46A98D356E155 /* Pods-UI Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UI Tests-resources.sh"; sourceTree = "<group>"; };
-		C0A69053E1CC42004FE07F3685DF8C17 /* KIFSystemTestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFSystemTestActor.h; path = Classes/KIFSystemTestActor.h; sourceTree = "<group>"; };
-		C3BB8F3D59112CB02E3C3DD070D00F2E /* OMChainKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OMChainKit.xcconfig; sourceTree = "<group>"; };
-		C568F03A5789653F08E3C9C9E77E61E8 /* KIFUITestActor-ConditionalTests.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KIFUITestActor-ConditionalTests.h"; path = "Classes/KIFUITestActor-ConditionalTests.h"; sourceTree = "<group>"; };
-		C57BD5A8238C03BB74D2DD5555A91869 /* XCTestCase-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTestCase-KIFAdditions.h"; path = "Additions/XCTestCase-KIFAdditions.h"; sourceTree = "<group>"; };
-		C87B43C4F81C2B73B583134B6B40D334 /* KIFTypist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTypist.m; path = Classes/KIFTypist.m; sourceTree = "<group>"; };
-		CB140C41323F42A4970794DB3917AC55 /* KIFUITestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFUITestActor.h; path = Classes/KIFUITestActor.h; sourceTree = "<group>"; };
-		CD4B6B921416B1FC799AB86BB72E0DBA /* UIAutomationHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIAutomationHelper.h; path = Classes/UIAutomationHelper.h; sourceTree = "<group>"; };
-		D2CD4E645517EE798C47EEC5616226F8 /* UIView-Debugging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView-Debugging.m"; path = "Additions/UIView-Debugging.m"; sourceTree = "<group>"; };
-		D33081EB58FEE91E3BBF3E078C569B41 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
-		D62BB9D8E6FB9B65A4965BE757823D31 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		D6FAD1B94F56BFC04F05910689AC1580 /* CGGeometry-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CGGeometry-KIFAdditions.m"; path = "Additions/CGGeometry-KIFAdditions.m"; sourceTree = "<group>"; };
-		DE82AC2F777BD2653859EB2E8CEB4FE4 /* NSError-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError-KIFAdditions.h"; path = "Additions/NSError-KIFAdditions.h"; sourceTree = "<group>"; };
-		E303DC752295FBB89A9CCE8AB216C352 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		E771486069CDD29BC2E6237AD5B7EBAE /* OMChainKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OMChainKit-dummy.m"; sourceTree = "<group>"; };
-		EB2062C2060AD096B5822ECD8B3F18D7 /* OMChainKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OMChainKit-Private.xcconfig"; sourceTree = "<group>"; };
-		EDBB9D3F82BDDDD0C7F424AD162671AF /* UITableView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView-KIFAdditions.h"; path = "Additions/UITableView-KIFAdditions.h"; sourceTree = "<group>"; };
-		F3A9BFAF210D6593DA814F8D79267636 /* OMChainAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMChainAddress.m; path = OMChainKit/OMChainKit/Source/OMChainAddress.m; sourceTree = "<group>"; };
-		F434BDA9724E98F4631E856E81AFFD38 /* KIFTestStepValidation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestStepValidation.m; path = Classes/KIFTestStepValidation.m; sourceTree = "<group>"; };
-		F967621522F40F2BFAA227BB8802AC4F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C28698A5CEE131A9F8FD7671FB2BC151 /* OMChainAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMChainAddress.h; path = OMChainKit/OMChainKit/Source/OMChainAddress.h; sourceTree = "<group>"; };
+		C2B01A804E1C78C424DDE981D4FEB032 /* UIAutomationHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIAutomationHelper.h; path = Classes/UIAutomationHelper.h; sourceTree = "<group>"; };
+		C3439F76DC614FCAB65C0906B2AAE9D8 /* UIView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView-KIFAdditions.m"; path = "Additions/UIView-KIFAdditions.m"; sourceTree = "<group>"; };
+		D15DD7ACC6251298257358D79BA630D4 /* KIF-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "KIF-Private.xcconfig"; sourceTree = "<group>"; };
+		D2444A5FC5E2FDB2B2F57CEE216416D2 /* UIScrollView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView-KIFAdditions.h"; path = "Additions/UIScrollView-KIFAdditions.h"; sourceTree = "<group>"; };
+		D40433892EE89C586736AD6F861CFB73 /* LoadableCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LoadableCategory.h; path = Additions/LoadableCategory.h; sourceTree = "<group>"; };
+		D5339C0A8023DA78A483A1DFEB5EF68B /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
+		D60DB5A7F5C2BBA241EE1A7B3A0460CC /* UIWindow-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow-KIFAdditions.m"; path = "Additions/UIWindow-KIFAdditions.m"; sourceTree = "<group>"; };
+		DE89B9D648CE1AD09C0557F10EC996BF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEECBE3DF4E6A6DE4CCA2B33E0048A9F /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		E4E704290C7C7574FC483CBF5927BEE3 /* libSSKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSKeychain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E78112A178AD18B3F70F2344204312D3 /* OMChainKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OMChainKit.xcconfig; sourceTree = "<group>"; };
+		EA121AF7008B68D1A1DDB02DFFF851FA /* UIAccessibilityElement-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAccessibilityElement-KIFAdditions.m"; path = "Additions/UIAccessibilityElement-KIFAdditions.m"; sourceTree = "<group>"; };
+		EABE39C90A60D05760A4CBB2EACA699F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		EADCD930A69B1A552F5C0AC20B206F5C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		EB77C3F323F95DD8E9BF63BB3D2183F2 /* OMChainKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMChainKit-prefix.pch"; sourceTree = "<group>"; };
+		EB7BAD162F96E9569F92B69796EA8C11 /* UIAccessibilityElement-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAccessibilityElement-KIFAdditions.h"; path = "Additions/UIAccessibilityElement-KIFAdditions.h"; sourceTree = "<group>"; };
+		EE34350422AC85D366679A9C5F7A3599 /* KIFTestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestActor.m; path = Classes/KIFTestActor.m; sourceTree = "<group>"; };
+		F23E418010ED201101AE18E1B391B2C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F329D4412504BB901F3283CA3F83D648 /* libOMChainKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOMChainKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F63E5FB9D11C948D4A4EF97BEC2A52D7 /* NSException-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSException-KIFAdditions.h"; path = "Additions/NSException-KIFAdditions.h"; sourceTree = "<group>"; };
+		F7AA2C059A3D595D5CF7A3CCDA00E460 /* SSKeychain-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SSKeychain-Private.xcconfig"; sourceTree = "<group>"; };
 		FA00ACAB670E2F58B6E48157832E1E6B /* Pods-UI Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UI Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FF0D8F8F7C8A50B89B947A4146AA041C /* KIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIF.h; path = Classes/KIF.h; sourceTree = "<group>"; };
+		FA65544B4DCF2F705EED1A1958D9A4A9 /* libKIF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKIF.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB95B5DFB25939CCC935F3B2960E75B4 /* SSKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSKeychain.xcconfig; sourceTree = "<group>"; };
+		FE2CF1FA339385BA37E53B22AD8708A5 /* UIEvent+KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIEvent+KIFAdditions.m"; path = "Additions/UIEvent+KIFAdditions.m"; sourceTree = "<group>"; };
 		FF8FCD72DC4635FB95F28E49297A7C46 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		FFC97B513BF8CB788000C9CD63800499 /* KIFTypist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTypist.m; path = Classes/KIFTypist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04919A29ACB5420B55D694C7D63667E0 /* Frameworks */ = {
+		1B008C251A1D424F136547FDF8BCCC31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7314204EBF141A6C6205FEF7EF64616 /* CoreGraphics.framework in Frameworks */,
-				856FC83661F62C9FFB8FBC7DE1C2ACDF /* Foundation.framework in Frameworks */,
-				B13714F8648CF04C7CFD7CFE0804F260 /* IOKit.framework in Frameworks */,
-				2F73A867FDF701968F3C482B05C63AF7 /* XCTest.framework in Frameworks */,
+				D348A7CC3FDB37C44B89F5BFDAB22F72 /* CoreGraphics.framework in Frameworks */,
+				D5B80D26738A3289BF9767451422840B /* Foundation.framework in Frameworks */,
+				70E0C84CA0631706DC2A33DBA875CECC /* IOKit.framework in Frameworks */,
+				BFBD693993A6E8CDE2C2CD711974D172 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55EA7C5ED7233A2F318D5626C16BADDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BACE2EB19901EACB2B14094251D2777F /* Foundation.framework in Frameworks */,
+				462F21E42957D404339DE6CD6B2962CC /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,54 +234,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99D165CDC65561EF24869B82E62F6375 /* Frameworks */ = {
+		B6A3D5E2EB596E5B33F4523A365FFC09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D82DB45FA10D15AB9A2756C0D8CFF1B2 /* Foundation.framework in Frameworks */,
+				18C384B4EFFCF267D2D7DA78CA4CDB9B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F959318823644A4C11A6F5CF91225233 /* Frameworks */ = {
+		C3BED9EDF49AA381EB17DD5D3194D566 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53CB7F0C2369F8AFB476C8E3D9C34860 /* Foundation.framework in Frameworks */,
+				1937D9EFC363B8A32EB4173C537043D7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E73D3CF103D37986DF7F59B02CB10B0 /* Pods */ = {
+		101D608208793D019FC6E53A3B639126 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D99CDE1826EED24A1776924E24E4B33F /* KIF */,
-				1EE9300ADCDB02FB5A8978052049EDB2 /* OMChainKit */,
+				76A0D5C770CFC0DE42B1D378399E09FD /* KIF.xcconfig */,
+				D15DD7ACC6251298257358D79BA630D4 /* KIF-Private.xcconfig */,
+				1E14B6CCEE463720851D62E790C343C5 /* KIF-dummy.m */,
+				8A3F51BB2D925B9D90FE975A908EF37E /* KIF-prefix.pch */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				71D02674543F70094D4B6E5A64B45CB2 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1EE9300ADCDB02FB5A8978052049EDB2 /* OMChainKit */ = {
-			isa = PBXGroup;
-			children = (
-				7D3627F5D567BB7A434476C2F6B58E78 /* OMChainAddress.h */,
-				F3A9BFAF210D6593DA814F8D79267636 /* OMChainAddress.m */,
-				868DB02CFC16E5AB9A5EC6F67DEF4085 /* OMChainTransaction.h */,
-				6DA4A596B04206E4A09ADA70A6541A43 /* OMChainTransaction.m */,
-				38B61F70E69E20D350657BAD526ACABE /* OMChainWallet.h */,
-				38853E71AD54731741B9785FCB99169C /* OMChainWallet.m */,
-				DAE292CE5A396CA464A9DEBA7FC187E1 /* Support Files */,
-			);
-			path = OMChainKit;
+			name = "Support Files";
+			path = "../Target Support Files/KIF";
 			sourceTree = "<group>";
 		};
 		1F78BFA23F1F625BB196CFC818E99E70 /* Pods-UI Tests */ = {
@@ -265,72 +279,34 @@
 			path = "Target Support Files/Pods-UI Tests";
 			sourceTree = "<group>";
 		};
-		5034F35FC683A3A16C5302D8669FE5A8 /* Core */ = {
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				615CE78BC4D103991DBCA0B85A2D4AD9 /* CGGeometry-KIFAdditions.h */,
-				D6FAD1B94F56BFC04F05910689AC1580 /* CGGeometry-KIFAdditions.m */,
-				B73F092AFC78FD973E6ABF1B991F2D45 /* IOHIDEvent+KIF.h */,
-				49555311254F61B6DEFA12328499C70B /* IOHIDEvent+KIF.m */,
-				FF0D8F8F7C8A50B89B947A4146AA041C /* KIF.h */,
-				C0A69053E1CC42004FE07F3685DF8C17 /* KIFSystemTestActor.h */,
-				09F5F3373C611680DB93ED860A483121 /* KIFSystemTestActor.m */,
-				2926C3C42FF2313D762862D7AC1B9D81 /* KIFTestActor.h */,
-				336C64A2C9E38A34539807FC54CFD717 /* KIFTestActor.m */,
-				BD37FEF0A1FB867E04DA2722A3DCB0FD /* KIFTestCase.h */,
-				1C86ACBBF7FBB73E4495CFE2D881E1AF /* KIFTestCase.m */,
-				6012E12F6DB87EEC04CB9869F27843B6 /* KIFTestStepValidation.h */,
-				F434BDA9724E98F4631E856E81AFFD38 /* KIFTestStepValidation.m */,
-				891A33FEB647BBEC44937383260EBE09 /* KIFTypist.h */,
-				C87B43C4F81C2B73B583134B6B40D334 /* KIFTypist.m */,
-				CB140C41323F42A4970794DB3917AC55 /* KIFUITestActor.h */,
-				6D508C37686C488D2FFD9562EE227740 /* KIFUITestActor.m */,
-				C568F03A5789653F08E3C9C9E77E61E8 /* KIFUITestActor-ConditionalTests.h */,
-				2C4D7812C0CD2F9C83CF8C95938966F0 /* KIFUITestActor-ConditionalTests.m */,
-				692756EBDD7DDDC1B0F48930371DB7B3 /* LoadableCategory.h */,
-				12768BF3395ADDE4BC1A9A5F33C9259B /* NSBundle-KIFAdditions.h */,
-				B2DBDBF00F44CFF4B285FCD9D8E262AF /* NSBundle-KIFAdditions.m */,
-				DE82AC2F777BD2653859EB2E8CEB4FE4 /* NSError-KIFAdditions.h */,
-				3FAA6C3B202FD5E36051E92D3501DEFF /* NSError-KIFAdditions.m */,
-				A64D5B1AE645922540CFEDE39A2EDD3F /* NSException-KIFAdditions.h */,
-				16921197ADA03418A28885AB16AAD3CF /* NSException-KIFAdditions.m */,
-				1EBDE1E35FE878155EF9FB78E5F3CCCF /* NSFileManager-KIFAdditions.h */,
-				308C29BDF7FF5EC7A58917140D0360DB /* NSFileManager-KIFAdditions.m */,
-				14EBC199870A6F6A04E79684D80C0C17 /* UIAccessibilityElement-KIFAdditions.h */,
-				7EE645D4F88509B42337FF84F78AF3E9 /* UIAccessibilityElement-KIFAdditions.m */,
-				1E54F2E880B49F8A16AF37CD90D89E79 /* UIApplication-KIFAdditions.h */,
-				55A04004A2C04D9D3F79CACFE4B75191 /* UIApplication-KIFAdditions.m */,
-				CD4B6B921416B1FC799AB86BB72E0DBA /* UIAutomationHelper.h */,
-				487AE2B0D0B17B1318D745200B0387BB /* UIAutomationHelper.m */,
-				403F8B353391F87CC25171A596A13EB6 /* UIEvent+KIFAdditions.h */,
-				3A0F3139D85E3B0E31749D9EFDF274F6 /* UIEvent+KIFAdditions.m */,
-				918EAD2CE95E47291559D83E14527E07 /* UIScrollView-KIFAdditions.h */,
-				BFB6226A09EBA97F47A73A19161CBEEE /* UIScrollView-KIFAdditions.m */,
-				EDBB9D3F82BDDDD0C7F424AD162671AF /* UITableView-KIFAdditions.h */,
-				13AFB77B7A065C4AE7D1C7B9F5BDB323 /* UITableView-KIFAdditions.m */,
-				3A39B1EFF0ED4F09EB5C4F0510AC5C22 /* UITouch-KIFAdditions.h */,
-				1CB5D4DB358B5B6CA58FB6005881218E /* UITouch-KIFAdditions.m */,
-				1C4C73EFE763A4D3BDB6A240494EC678 /* UIView-Debugging.h */,
-				D2CD4E645517EE798C47EEC5616226F8 /* UIView-Debugging.m */,
-				62F1CA69BE1DAB8D1AA19CEEC63FBAC7 /* UIView-KIFAdditions.h */,
-				A4EF9E5F3F1E9FDA9B3A5961450542CA /* UIView-KIFAdditions.m */,
-				2B022B6A6430F39961EBB676F6230AE1 /* UIWindow-KIFAdditions.h */,
-				9015EE04064BC77D469EC92FFE434B60 /* UIWindow-KIFAdditions.m */,
-				C57BD5A8238C03BB74D2DD5555A91869 /* XCTestCase-KIFAdditions.h */,
-				6BAC3EF9310D711ADCF2FF9131C91A5D /* XCTestCase-KIFAdditions.m */,
+				73C0D87EFA0D0F54D3CF31E1A4A23408 /* iOS */,
 			);
-			name = Core;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		71D02674543F70094D4B6E5A64B45CB2 /* iOS */ = {
+		2AF2E921EC85234D58D79298731CCB7E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7C5D951A39D8B0F658F8A69D2D0C1EA1 /* CoreGraphics.framework */,
-				F967621522F40F2BFAA227BB8802AC4F /* Foundation.framework */,
-				D33081EB58FEE91E3BBF3E078C569B41 /* IOKit.framework */,
-				B62DC075A998EA0D0CF9AB858651B9FE /* XCTest.framework */,
+				E78112A178AD18B3F70F2344204312D3 /* OMChainKit.xcconfig */,
+				098FAF552509FE9830B12345EB012838 /* OMChainKit-Private.xcconfig */,
+				8232E27DA7B10FE2EF4E1471ACFDAEF6 /* OMChainKit-dummy.m */,
+				EB77C3F323F95DD8E9BF63BB3D2183F2 /* OMChainKit-prefix.pch */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/OMChainKit";
+			sourceTree = "<group>";
+		};
+		4BBCE3A13B93016AF1F3F7F9D60FB586 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A7A9CEBA726A3F1AF19BE7DA5CF8321 /* KIF */,
+				A99D2A967682F32B59879A67EEC1879C /* OMChainKit */,
+				ECDB6EEEA25911533D738AA6A339FD94 /* SSKeychain */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		72A7E11D856AE53E23AAD210CA336289 /* Pods */ = {
@@ -338,24 +314,59 @@
 			children = (
 				937828FF3698C74BA21D1070B3860A0E /* Pods-acknowledgements.markdown */,
 				FF8FCD72DC4635FB95F28E49297A7C46 /* Pods-acknowledgements.plist */,
-				1829AE989ED85CA465B09B318E12F940 /* Pods-dummy.m */,
+				DEECBE3DF4E6A6DE4CCA2B33E0048A9F /* Pods-dummy.m */,
 				1C15A62FD7AC6272D999EF028DDDAD61 /* Pods-resources.sh */,
-				D62BB9D8E6FB9B65A4965BE757823D31 /* Pods.debug.xcconfig */,
-				E303DC752295FBB89A9CCE8AB216C352 /* Pods.release.xcconfig */,
+				EADCD930A69B1A552F5C0AC20B206F5C /* Pods.debug.xcconfig */,
+				EABE39C90A60D05760A4CBB2EACA699F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		73C0D87EFA0D0F54D3CF31E1A4A23408 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				66091D70910F82F03D1BD5EFE1426AB5 /* CoreGraphics.framework */,
+				F23E418010ED201101AE18E1B391B2C2 /* Foundation.framework */,
+				88EFA00B8A14514A7CC264EA5F956830 /* IOKit.framework */,
+				0D926D42C7792BB387E10B572EE720E9 /* Security.framework */,
+				55FAEC20AF00346950137F85B562F28C /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7A7A9CEBA726A3F1AF19BE7DA5CF8321 /* KIF */ = {
+			isa = PBXGroup;
+			children = (
+				CC56CD902BE1CDBD4C9B81AED4C8CA4A /* Core */,
+				101D608208793D019FC6E53A3B639126 /* Support Files */,
+			);
+			path = KIF;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				0E73D3CF103D37986DF7F59B02CB10B0 /* Pods */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				4BBCE3A13B93016AF1F3F7F9D60FB586 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				C1D417AEDC41E9066ACFFBF05D4724BB /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		A99D2A967682F32B59879A67EEC1879C /* OMChainKit */ = {
+			isa = PBXGroup;
+			children = (
+				C28698A5CEE131A9F8FD7671FB2BC151 /* OMChainAddress.h */,
+				1CD5EBC01C0EC44F7E73F4A81FA73DD2 /* OMChainAddress.m */,
+				7B82908560E82FEC660CEBD9F0EBCD36 /* OMChainTransaction.h */,
+				2C1D19F27A95E5164C40F5ABCB92AEA3 /* OMChainTransaction.m */,
+				238696DECCE5DC6CF3C8A9DD33063711 /* OMChainWallet.h */,
+				8DC3A6D65F3B419CD4A8B369741A5A55 /* OMChainWallet.m */,
+				2AF2E921EC85234D58D79298731CCB7E /* Support Files */,
+			);
+			path = OMChainKit;
 			sourceTree = "<group>";
 		};
 		C1D417AEDC41E9066ACFFBF05D4724BB /* Targets Support Files */ = {
@@ -367,116 +378,157 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		CC56CD902BE1CDBD4C9B81AED4C8CA4A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				21E276C3309EB24767F132C455DE5E90 /* CGGeometry-KIFAdditions.h */,
+				73E04DAF78B89BC466572909636559C6 /* CGGeometry-KIFAdditions.m */,
+				A51D76FB8B288D03D26AC339ED2B5BB8 /* IOHIDEvent+KIF.h */,
+				59930583BC2CCA7DA127024F982E426D /* IOHIDEvent+KIF.m */,
+				BD6213DA0F1CF91C3C1BF0CCB92BB373 /* KIF.h */,
+				74C7A174045E2F7D6958A1160C9E17B8 /* KIFSystemTestActor.h */,
+				7CD3C82A051D55102BA634D4DC1949F8 /* KIFSystemTestActor.m */,
+				569FDF606EA3912332949D1F7341E011 /* KIFTestActor.h */,
+				EE34350422AC85D366679A9C5F7A3599 /* KIFTestActor.m */,
+				A1707A453FED535709A778102E28B06A /* KIFTestCase.h */,
+				A7F1B9C1CC3876570A8534E848787181 /* KIFTestCase.m */,
+				6D03F470D6CFEF31C78B4E0FF28847FA /* KIFTestStepValidation.h */,
+				5DE01D9CFB68E4132C3B91F3D21A096F /* KIFTestStepValidation.m */,
+				BB81A4654FD083EE3CE01DE5F0DAEF8E /* KIFTypist.h */,
+				FFC97B513BF8CB788000C9CD63800499 /* KIFTypist.m */,
+				70B3DEBBEC9CCBEB376742C015A1F044 /* KIFUITestActor.h */,
+				0B5FE3A3FF803C70E6009B01205A3C0E /* KIFUITestActor.m */,
+				A7D7BE47B1DC060197FE4E4F33559984 /* KIFUITestActor-ConditionalTests.h */,
+				22872AA0B2F53B7932212F3B4A1EDD76 /* KIFUITestActor-ConditionalTests.m */,
+				D40433892EE89C586736AD6F861CFB73 /* LoadableCategory.h */,
+				6F749398F386539E2DD3E432EE0CDFAE /* NSBundle-KIFAdditions.h */,
+				3772E4B9346E2437CD627A1E674286AD /* NSBundle-KIFAdditions.m */,
+				7DCD274AC5423CBBD870EEB445948C7A /* NSError-KIFAdditions.h */,
+				BBD303CD65AFB01BDB4FC7B1A0B27545 /* NSError-KIFAdditions.m */,
+				F63E5FB9D11C948D4A4EF97BEC2A52D7 /* NSException-KIFAdditions.h */,
+				4AC2D6B36549D0C1A62EE1CD8ADD185D /* NSException-KIFAdditions.m */,
+				64668C0FE6890DA9F219FFC33726C04E /* NSFileManager-KIFAdditions.h */,
+				1846656CBF80F6E8C178903CF3F0508D /* NSFileManager-KIFAdditions.m */,
+				EB7BAD162F96E9569F92B69796EA8C11 /* UIAccessibilityElement-KIFAdditions.h */,
+				EA121AF7008B68D1A1DDB02DFFF851FA /* UIAccessibilityElement-KIFAdditions.m */,
+				50195433C374A1D96684C1D2ED75FC07 /* UIApplication-KIFAdditions.h */,
+				B0A0E09FC80B29EE54F885059954D1B2 /* UIApplication-KIFAdditions.m */,
+				C2B01A804E1C78C424DDE981D4FEB032 /* UIAutomationHelper.h */,
+				1C8457406BFB5A5E344AF18B67E29401 /* UIAutomationHelper.m */,
+				281616A8E8E66924F3BB9991D4C93572 /* UIEvent+KIFAdditions.h */,
+				FE2CF1FA339385BA37E53B22AD8708A5 /* UIEvent+KIFAdditions.m */,
+				D2444A5FC5E2FDB2B2F57CEE216416D2 /* UIScrollView-KIFAdditions.h */,
+				4B46E2B5522F09D7F6F54936F93B503E /* UIScrollView-KIFAdditions.m */,
+				37E2564248E8647CC434436DA1761B1A /* UITableView-KIFAdditions.h */,
+				5232297266B1B2B5E74E92C102F742A4 /* UITableView-KIFAdditions.m */,
+				7915133C5A23C574D9EEFB711D097A4B /* UITouch-KIFAdditions.h */,
+				919FE1AE7FCDCE1B2705E97C838F8BF1 /* UITouch-KIFAdditions.m */,
+				5365C772FFE7C42D1A228FE01685A47C /* UIView-Debugging.h */,
+				87277FFDD0EA95BB4251714437731CC7 /* UIView-Debugging.m */,
+				AD70D5CF195DBFBE19E5B1BD1C12CB30 /* UIView-KIFAdditions.h */,
+				C3439F76DC614FCAB65C0906B2AAE9D8 /* UIView-KIFAdditions.m */,
+				2DA26E16FDE0C430C7DAD0CD3C41CE8D /* UIWindow-KIFAdditions.h */,
+				D60DB5A7F5C2BBA241EE1A7B3A0460CC /* UIWindow-KIFAdditions.m */,
+				5DB56F50256E86C97BA6B90EFDA333D9 /* XCTestCase-KIFAdditions.h */,
+				76E0F43831D0DB904E74E713F741ADC2 /* XCTestCase-KIFAdditions.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				121B5C9B0C2B324E48DB2130D1F5AF50 /* libKIF.a */,
-				B6B13DBE93614A4B2CA1CEE77CA4AD7F /* libOMChainKit.a */,
-				42BEF5CFFBC166FE0D5C45AF313D807C /* libPods.a */,
+				FA65544B4DCF2F705EED1A1958D9A4A9 /* libKIF.a */,
+				F329D4412504BB901F3283CA3F83D648 /* libOMChainKit.a */,
+				DE89B9D648CE1AD09C0557F10EC996BF /* libPods.a */,
 				1DC78DD163BDB445A2B91A656B87CF7F /* libPods-UI Tests.a */,
+				E4E704290C7C7574FC483CBF5927BEE3 /* libSSKeychain.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D99CDE1826EED24A1776924E24E4B33F /* KIF */ = {
+		ECDB6EEEA25911533D738AA6A339FD94 /* SSKeychain */ = {
 			isa = PBXGroup;
 			children = (
-				5034F35FC683A3A16C5302D8669FE5A8 /* Core */,
-				DE2214F874D07A1DD70EAA5E5A12EAC6 /* Support Files */,
+				3A573E3C50215EE6D076255EFEF0D93B /* SSKeychain.h */,
+				D5339C0A8023DA78A483A1DFEB5EF68B /* SSKeychain.m */,
+				55FF90CC6C771E38A010F3847C6549A0 /* SSKeychainQuery.h */,
+				A8244AB0E0D8E13DB84AE8F420CB1945 /* SSKeychainQuery.m */,
+				FDFFBF237830117AE6B915AF720F4437 /* Support Files */,
 			);
-			path = KIF;
+			path = SSKeychain;
 			sourceTree = "<group>";
 		};
-		DAE292CE5A396CA464A9DEBA7FC187E1 /* Support Files */ = {
+		FDFFBF237830117AE6B915AF720F4437 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C3BB8F3D59112CB02E3C3DD070D00F2E /* OMChainKit.xcconfig */,
-				EB2062C2060AD096B5822ECD8B3F18D7 /* OMChainKit-Private.xcconfig */,
-				E771486069CDD29BC2E6237AD5B7EBAE /* OMChainKit-dummy.m */,
-				11E19A352DE4886008E5AF8F756DE43C /* OMChainKit-prefix.pch */,
+				FB95B5DFB25939CCC935F3B2960E75B4 /* SSKeychain.xcconfig */,
+				F7AA2C059A3D595D5CF7A3CCDA00E460 /* SSKeychain-Private.xcconfig */,
+				8FD360DC39ED57B904797540B29D333B /* SSKeychain-dummy.m */,
+				8847AB64BD4464CB8A3DCA36DE616347 /* SSKeychain-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/OMChainKit";
-			sourceTree = "<group>";
-		};
-		DE2214F874D07A1DD70EAA5E5A12EAC6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A0215C382AF8766A5B7C7EC2E7F70EA0 /* KIF.xcconfig */,
-				47C4BFD5CF00E743446537C1497D3EAD /* KIF-Private.xcconfig */,
-				7F60E8ADB87A320AF90270EEEF3E18E2 /* KIF-dummy.m */,
-				64C19BD1F9BF94EB0B9A057DFE0D520F /* KIF-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/KIF";
+			path = "../Target Support Files/SSKeychain";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3F68623A0B45BA5EF51A1491E76476B9 /* Headers */ = {
+		6384B1AFE539DB5341E1890292240FCF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F70805573B1FF838A48F1492326D18B /* OMChainAddress.h in Headers */,
-				3514E6B04735781D78F647D9B5C57C85 /* OMChainTransaction.h in Headers */,
-				AFFC26FCE4C24612FF5675208E2BC9AD /* OMChainWallet.h in Headers */,
+				77A359E99863C8F4888883335CBA1578 /* CGGeometry-KIFAdditions.h in Headers */,
+				CF38136B5D6CF5631498D21F1C1F8E7D /* IOHIDEvent+KIF.h in Headers */,
+				2F69221A6922EBF3610866886382B6D0 /* KIF.h in Headers */,
+				66F9F4ADDC964ABEAC484C32C5D83233 /* KIFSystemTestActor.h in Headers */,
+				AE2F61B70564FEC3DF0E3B54AA3638A3 /* KIFTestActor.h in Headers */,
+				9152FD4F547A0F23E136CD10B1399B44 /* KIFTestCase.h in Headers */,
+				A12AB3F5489C96DD71C53C148628DFA3 /* KIFTestStepValidation.h in Headers */,
+				7AC5803DBE5BFA42C0DFFD7CB586AE58 /* KIFTypist.h in Headers */,
+				3F79319DD41E9C0E9F3D33C739F1661C /* KIFUITestActor-ConditionalTests.h in Headers */,
+				F2DE77EB8A0A009554F59A5E511CACAD /* KIFUITestActor.h in Headers */,
+				77536DA183705FF61EC10E108212E5F5 /* LoadableCategory.h in Headers */,
+				ADB16D3138A236357D5292E2564B419B /* NSBundle-KIFAdditions.h in Headers */,
+				260DAD8581B2AFF0B32CB8643A4E0433 /* NSError-KIFAdditions.h in Headers */,
+				2180D341A4551BE095CCF237D1E682EE /* NSException-KIFAdditions.h in Headers */,
+				3A710246CD13814225AE0E39B74EEAEB /* NSFileManager-KIFAdditions.h in Headers */,
+				7B553E7586BA37E96F04940B518D8BCA /* UIAccessibilityElement-KIFAdditions.h in Headers */,
+				F571C90157088F5679243334CBD3EAAC /* UIApplication-KIFAdditions.h in Headers */,
+				7DC212DF2B490D950A6010831EF5DA88 /* UIAutomationHelper.h in Headers */,
+				7A5D59914842D36BBD575691E66FD568 /* UIEvent+KIFAdditions.h in Headers */,
+				0C64685703A612AA1C78D4229632989E /* UIScrollView-KIFAdditions.h in Headers */,
+				B7A7A0A1DC0EAAEB136D7B5C54E75701 /* UITableView-KIFAdditions.h in Headers */,
+				21F053B1B7E863F47709DB24DA04A7AB /* UITouch-KIFAdditions.h in Headers */,
+				744B5610484DDEB1F440DE49EBBFBAA5 /* UIView-Debugging.h in Headers */,
+				81DD88EF201714C866113865668F0177 /* UIView-KIFAdditions.h in Headers */,
+				D2D954793CCE5C4A024FEAB469BAB347 /* UIWindow-KIFAdditions.h in Headers */,
+				4A951E3B6C1A2D40713DCF62F96955D2 /* XCTestCase-KIFAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A75E690AB3E246176A2CDBF3B4F7F19D /* Headers */ = {
+		C617CA68463FCDB481802CF0743AAF9F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73C25EFF44EFBED5E82D878605D3A4A9 /* CGGeometry-KIFAdditions.h in Headers */,
-				5A697086B34814F2505631FFCE7A208C /* IOHIDEvent+KIF.h in Headers */,
-				A53362DFE1A68027A6A343845893991C /* KIF.h in Headers */,
-				814B227950F7A20E711B69E9C237AEDD /* KIFSystemTestActor.h in Headers */,
-				2969D913E80F9B6CDBF74FBD06C10C8B /* KIFTestActor.h in Headers */,
-				0F182C6521791F9D5340759EBCAEAAC9 /* KIFTestCase.h in Headers */,
-				0625B021EE4CAABB9CF1D6B7CE520FCA /* KIFTestStepValidation.h in Headers */,
-				E0C484D17B55DA5FC0502A9E975923A3 /* KIFTypist.h in Headers */,
-				FA6ED4D30896EDB7A7B4196CE63CCB8C /* KIFUITestActor-ConditionalTests.h in Headers */,
-				9D5C47E9237B595006BF26B455859A52 /* KIFUITestActor.h in Headers */,
-				3E6C89B5C6E4F38CA26DC6E353602C56 /* LoadableCategory.h in Headers */,
-				36C1065004A63ECA36AC346F3E04200B /* NSBundle-KIFAdditions.h in Headers */,
-				C6B320777EBA8A746DE4AE96F929AA03 /* NSError-KIFAdditions.h in Headers */,
-				0E411E306EA191B290297985582F3022 /* NSException-KIFAdditions.h in Headers */,
-				5F6B3C0630944A606C4EF210801A2C49 /* NSFileManager-KIFAdditions.h in Headers */,
-				8083290A2759E147860C81BE41ABB260 /* UIAccessibilityElement-KIFAdditions.h in Headers */,
-				D2771477AB1BC0AE562D1590CE4F6286 /* UIApplication-KIFAdditions.h in Headers */,
-				1474C8AFB4F8C409F9E7780B71104AAE /* UIAutomationHelper.h in Headers */,
-				F075A1A1DB0CC22D75D93345849F72C0 /* UIEvent+KIFAdditions.h in Headers */,
-				14D0A5C0311448A929FCD0D85E0D9962 /* UIScrollView-KIFAdditions.h in Headers */,
-				202E967705CC8E136C6BBF88D0B6FA24 /* UITableView-KIFAdditions.h in Headers */,
-				8152826B8C159B63D2FD35B799890928 /* UITouch-KIFAdditions.h in Headers */,
-				ACE3CD91D4041D37A8E52FD268A9D38C /* UIView-Debugging.h in Headers */,
-				0AF47328BBD130CE3AB668D287BEED8A /* UIView-KIFAdditions.h in Headers */,
-				58F79BD4C39C148A80A10EDF3BDCF588 /* UIWindow-KIFAdditions.h in Headers */,
-				B777C53BB9C90643BE5F25B6AE5390BB /* XCTestCase-KIFAdditions.h in Headers */,
+				DA9D665977EB83478870CACE93AA141C /* SSKeychain.h in Headers */,
+				3A1A57D547677825BAB0A5ECC659588C /* SSKeychainQuery.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F07AA844404B1A2A95D3E4C7E6F38D1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86F46775A5E14470B4E0C3FC80A1136C /* OMChainAddress.h in Headers */,
+				34602BD61C4BF92968DF4D0C70860495 /* OMChainTransaction.h in Headers */,
+				1ACA830E13F2BB26B150DB83FCFC3AA8 /* OMChainWallet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		12AE659CA3A1E74ACCD67AB5373CF02D /* KIF */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 57F914B63E724128A991596267DDEFC6 /* Build configuration list for PBXNativeTarget "KIF" */;
-			buildPhases = (
-				A60E2CE3D35E3790C8A7226AB8F9CC47 /* Sources */,
-				04919A29ACB5420B55D694C7D63667E0 /* Frameworks */,
-				A75E690AB3E246176A2CDBF3B4F7F19D /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = KIF;
-			productName = KIF;
-			productReference = 121B5C9B0C2B324E48DB2130D1F5AF50 /* libKIF.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		40C6801DEC7AC54B17F2AE69CE468311 /* Pods-UI Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B111648AA63158D2E419CA58F9B907C5 /* Build configuration list for PBXNativeTarget "Pods-UI Tests" */;
@@ -487,37 +539,20 @@
 			buildRules = (
 			);
 			dependencies = (
-				DBED5E65AF42BC61B6339E2118FB26FE /* PBXTargetDependency */,
+				A33278D2600C048D74F4F8A52A630C02 /* PBXTargetDependency */,
 			);
 			name = "Pods-UI Tests";
 			productName = "Pods-UI Tests";
 			productReference = 1DC78DD163BDB445A2B91A656B87CF7F /* libPods-UI Tests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		6047F5231C05E28F4C5130167ED15D64 /* Pods */ = {
+		4BE51938AB8048230A668768BD8414AE /* OMChainKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CDF4F6E331D04EC09468D6081EDF063 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 28C5636311B52CBD714F594747C0ED53 /* Build configuration list for PBXNativeTarget "OMChainKit" */;
 			buildPhases = (
-				63751785A38A46BE604762FF8AFB9292 /* Sources */,
-				F959318823644A4C11A6F5CF91225233 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				74A49C142FF470242B25ECAFC0B51305 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 42BEF5CFFBC166FE0D5C45AF313D807C /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A56259F1DA0D7AF62AC596AEC760642D /* OMChainKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 969691A2036947239ED548CD09E710BE /* Build configuration list for PBXNativeTarget "OMChainKit" */;
-			buildPhases = (
-				723F79D84BFD416670D4A83600C55D13 /* Sources */,
-				99D165CDC65561EF24869B82E62F6375 /* Frameworks */,
-				3F68623A0B45BA5EF51A1491E76476B9 /* Headers */,
+				78C7DB516A30E5365F3F37AF66817441 /* Sources */,
+				B6A3D5E2EB596E5B33F4523A365FFC09 /* Frameworks */,
+				F07AA844404B1A2A95D3E4C7E6F38D1B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -525,7 +560,59 @@
 			);
 			name = OMChainKit;
 			productName = OMChainKit;
-			productReference = B6B13DBE93614A4B2CA1CEE77CA4AD7F /* libOMChainKit.a */;
+			productReference = F329D4412504BB901F3283CA3F83D648 /* libOMChainKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5015A26F131A3062F3B93FE02DFBE7F8 /* KIF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBF93446FEFAFD69729D06D00428B8C0 /* Build configuration list for PBXNativeTarget "KIF" */;
+			buildPhases = (
+				86DFFAE5DADF12A59D40EB36FD0349C1 /* Sources */,
+				1B008C251A1D424F136547FDF8BCCC31 /* Frameworks */,
+				6384B1AFE539DB5341E1890292240FCF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KIF;
+			productName = KIF;
+			productReference = FA65544B4DCF2F705EED1A1958D9A4A9 /* libKIF.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CA5DFB7E5197BBFDA011C711EADDDA1A /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F136D38BAE5EC9009C7120C0DEC8B4E /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				14F2A0EB9405F2AEF7C7499963ED64F5 /* Sources */,
+				C3BED9EDF49AA381EB17DD5D3194D566 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC6370A3365C63F70C8C0B3975035E97 /* PBXTargetDependency */,
+				A3254617BDA2B44BFB2F81A894FEEF42 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = DE89B9D648CE1AD09C0557F10EC996BF /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EA3931D121EE165685E6E6C251F033C0 /* SSKeychain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A7F0AC2FB91E6CAB44E5342F6991C72 /* Build configuration list for PBXNativeTarget "SSKeychain" */;
+			buildPhases = (
+				0DED45C17113F02D24CE97201A7846CB /* Sources */,
+				55EA7C5ED7233A2F318D5626C16BADDD /* Frameworks */,
+				C617CA68463FCDB481802CF0743AAF9F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSKeychain;
+			productName = SSKeychain;
+			productReference = E4E704290C7C7574FC483CBF5927BEE3 /* libSSKeychain.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -549,63 +636,74 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12AE659CA3A1E74ACCD67AB5373CF02D /* KIF */,
-				A56259F1DA0D7AF62AC596AEC760642D /* OMChainKit */,
-				6047F5231C05E28F4C5130167ED15D64 /* Pods */,
+				5015A26F131A3062F3B93FE02DFBE7F8 /* KIF */,
+				4BE51938AB8048230A668768BD8414AE /* OMChainKit */,
+				CA5DFB7E5197BBFDA011C711EADDDA1A /* Pods */,
 				40C6801DEC7AC54B17F2AE69CE468311 /* Pods-UI Tests */,
+				EA3931D121EE165685E6E6C251F033C0 /* SSKeychain */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		63751785A38A46BE604762FF8AFB9292 /* Sources */ = {
+		0DED45C17113F02D24CE97201A7846CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8560257B04499AF1B4D2A34C9E609CDD /* Pods-dummy.m in Sources */,
+				CF85BB5F573E6066871F14A011F42E3B /* SSKeychain-dummy.m in Sources */,
+				C448ED2A47CCE08BC5116C230CAD58B9 /* SSKeychain.m in Sources */,
+				D0C276BE14E97B62E2ED80D2326BA96A /* SSKeychainQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		723F79D84BFD416670D4A83600C55D13 /* Sources */ = {
+		14F2A0EB9405F2AEF7C7499963ED64F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72ECD042CE4A71F0C7D382FF6E17E7D6 /* OMChainAddress.m in Sources */,
-				A70556E4C5536AE5A5E5E68FA89EEE8B /* OMChainKit-dummy.m in Sources */,
-				A79E6FED9E7CBBF2EF2D8B79565242DA /* OMChainTransaction.m in Sources */,
-				8776DC7EDE63BF9CFC29A58E554AA90C /* OMChainWallet.m in Sources */,
+				267B73EA9400F6C003EB97D31F9BCC4C /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A60E2CE3D35E3790C8A7226AB8F9CC47 /* Sources */ = {
+		78C7DB516A30E5365F3F37AF66817441 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD80D80177CE10B6977A26BFE482E9DF /* CGGeometry-KIFAdditions.m in Sources */,
-				E9F7BDDDEBF4E11F9B6873718AD7C578 /* IOHIDEvent+KIF.m in Sources */,
-				BC0A6C086156A0A33D5C542AA3BEBCFD /* KIF-dummy.m in Sources */,
-				9C55546925DE2407A0954EF17FC4DBCB /* KIFSystemTestActor.m in Sources */,
-				59631929D9C497797FD1D9D0C7A864E5 /* KIFTestActor.m in Sources */,
-				9261B3EAB026AE5B73C93E1D7CE7F8E5 /* KIFTestCase.m in Sources */,
-				020C41D39309245F58BE7B1D3F8A9315 /* KIFTestStepValidation.m in Sources */,
-				D16D0A6F9A27D3E1181E1EEB701E7AF6 /* KIFTypist.m in Sources */,
-				9084575F7B98F0F28FC3FD15D23D9665 /* KIFUITestActor-ConditionalTests.m in Sources */,
-				3096B884B6F950837DBB0705726E7B24 /* KIFUITestActor.m in Sources */,
-				BD2C2C7ACA92F1AD98883199A1FEB8BD /* NSBundle-KIFAdditions.m in Sources */,
-				412ACB1A55E2701341851A65EB29F729 /* NSError-KIFAdditions.m in Sources */,
-				FD227A6E0D8009342783F3A29DBD5101 /* NSException-KIFAdditions.m in Sources */,
-				3F87A922BCFAD469FA61B88D6DD4A05D /* NSFileManager-KIFAdditions.m in Sources */,
-				EA2F8CF485A8286AB39ADBEA121862D2 /* UIAccessibilityElement-KIFAdditions.m in Sources */,
-				9E3516CB92E2A768DAFD5AE6A561C5F3 /* UIApplication-KIFAdditions.m in Sources */,
-				E3BC8B1AEE2A463F70BB251F092D4E28 /* UIAutomationHelper.m in Sources */,
-				7DC88821980287DD7D7D4369BA58BFEF /* UIEvent+KIFAdditions.m in Sources */,
-				679E583A60ED4B524F6E488AB37E63D0 /* UIScrollView-KIFAdditions.m in Sources */,
-				BC6043540EB574B4C00FF2E0C76498B8 /* UITableView-KIFAdditions.m in Sources */,
-				F11E72D1AC46EBCD4193B80F3A323D4E /* UITouch-KIFAdditions.m in Sources */,
-				AA02230F75D1B522FBB0E89658496C92 /* UIView-Debugging.m in Sources */,
-				03E377EDE009B32D4DCDA128D65E8635 /* UIView-KIFAdditions.m in Sources */,
-				807A05052A45BA525D534CD36C15BA04 /* UIWindow-KIFAdditions.m in Sources */,
-				65E2807397C5B5DB20A7C6092F4DA395 /* XCTestCase-KIFAdditions.m in Sources */,
+				322724FCBCA25B6F362ED465CBF7816F /* OMChainAddress.m in Sources */,
+				C3D98095FE415220D79D962CCD6C81E9 /* OMChainKit-dummy.m in Sources */,
+				80995B84AD979B943E9EF14462B9FB62 /* OMChainTransaction.m in Sources */,
+				430242C75A9470DA9C900714535D400B /* OMChainWallet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86DFFAE5DADF12A59D40EB36FD0349C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7B30602301EA047151657082AE8B208 /* CGGeometry-KIFAdditions.m in Sources */,
+				4ABC5C1C294DED0E5EE41FDACF9F1E14 /* IOHIDEvent+KIF.m in Sources */,
+				F8C4E5B486A43D1CF9391729195380A9 /* KIF-dummy.m in Sources */,
+				F989D87AA40D33DE47A3F8867C165A40 /* KIFSystemTestActor.m in Sources */,
+				9565EF35D698AB5AA24F49E562BB7272 /* KIFTestActor.m in Sources */,
+				AF01358DD5086E5D4A57E9D54F6372E6 /* KIFTestCase.m in Sources */,
+				9F7DA9EDBCD0D59F679C06CA25CD260D /* KIFTestStepValidation.m in Sources */,
+				DCB3FAE7093BA18692D5BA73092431FF /* KIFTypist.m in Sources */,
+				9DDBB4D12E72C19CB44B5E191C8DA529 /* KIFUITestActor-ConditionalTests.m in Sources */,
+				00FBF39851F4D5526DF87D50ABF891B3 /* KIFUITestActor.m in Sources */,
+				02EB16B1E400B130E852348F38794710 /* NSBundle-KIFAdditions.m in Sources */,
+				EFE384390A31BC0E707A00F32BE4CE55 /* NSError-KIFAdditions.m in Sources */,
+				B3058829A9602981EF6D551821EF5166 /* NSException-KIFAdditions.m in Sources */,
+				4F722C1F6D306B41ABDF124C39D4BC7A /* NSFileManager-KIFAdditions.m in Sources */,
+				32F39BF1AD796CB80C1FA84FC252A2F7 /* UIAccessibilityElement-KIFAdditions.m in Sources */,
+				AFDE998B0D11DDFD8DBCDCF2DFA8BEB8 /* UIApplication-KIFAdditions.m in Sources */,
+				D21E6423687AD049C9388CD0A40426DC /* UIAutomationHelper.m in Sources */,
+				268C064F8EBD4D11B55DAB08068E9BB1 /* UIEvent+KIFAdditions.m in Sources */,
+				1FA2E89E3574B51BCB08D75FAC6314AC /* UIScrollView-KIFAdditions.m in Sources */,
+				83926000338FC679DB3D98F38D812093 /* UITableView-KIFAdditions.m in Sources */,
+				C4B2052206136800B304F0EA0560030D /* UITouch-KIFAdditions.m in Sources */,
+				12ECE086472F366631CCBB32043395D0 /* UIView-Debugging.m in Sources */,
+				F63245856E3DB4135D57E386B865D033 /* UIView-KIFAdditions.m in Sources */,
+				2C0B514FED596DFF0C8071CDAA4BD52E /* UIWindow-KIFAdditions.m in Sources */,
+				C30A70763A5BFDD53DC3321408EC5879 /* XCTestCase-KIFAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,17 +718,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		74A49C142FF470242B25ECAFC0B51305 /* PBXTargetDependency */ = {
+		A3254617BDA2B44BFB2F81A894FEEF42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = OMChainKit;
-			target = A56259F1DA0D7AF62AC596AEC760642D /* OMChainKit */;
-			targetProxy = 3B9E4F917A59C3BCDCB13C62C5BCFC0F /* PBXContainerItemProxy */;
+			name = SSKeychain;
+			target = EA3931D121EE165685E6E6C251F033C0 /* SSKeychain */;
+			targetProxy = A55F61227639BAF776F6892CD6347D22 /* PBXContainerItemProxy */;
 		};
-		DBED5E65AF42BC61B6339E2118FB26FE /* PBXTargetDependency */ = {
+		A33278D2600C048D74F4F8A52A630C02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KIF;
-			target = 12AE659CA3A1E74ACCD67AB5373CF02D /* KIF */;
-			targetProxy = 98900EA3921D01ADF2D0ADBE896F4D90 /* PBXContainerItemProxy */;
+			target = 5015A26F131A3062F3B93FE02DFBE7F8 /* KIF */;
+			targetProxy = BDB6948482F2653E70DAE321B64C1775 /* PBXContainerItemProxy */;
+		};
+		CC6370A3365C63F70C8C0B3975035E97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OMChainKit;
+			target = 4BE51938AB8048230A668768BD8414AE /* OMChainKit */;
+			targetProxy = EB4BF46E1B681A98FAE708BCE5B23314 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -651,9 +755,9 @@
 			};
 			name = Release;
 		};
-		1D12F887AEC5A2E88CE4F34FB0D5289F /* Debug */ = {
+		0D3C93D3080B0E80F873DB6E5E4EC736 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47C4BFD5CF00E743446537C1497D3EAD /* KIF-Private.xcconfig */;
+			baseConfigurationReference = D15DD7ACC6251298257358D79BA630D4 /* KIF-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/KIF/KIF-prefix.pch";
@@ -666,6 +770,22 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		22B85A24F58B8F7F3C75792BBA486AA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 098FAF552509FE9830B12345EB012838 /* OMChainKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OMChainKit/OMChainKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		3A2227288B64E3D29F20403DB38B0F28 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -682,54 +802,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
-		};
-		3A89887E2538547E61DEC32C8A3CE63F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47C4BFD5CF00E743446537C1497D3EAD /* KIF-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/KIF/KIF-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		41ACAF91C8673D423C4F0E34FA04A665 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D62BB9D8E6FB9B65A4965BE757823D31 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		451911E61974D24796EE6A7BA0ED50A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E303DC752295FBB89A9CCE8AB216C352 /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
 		};
 		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -770,6 +842,22 @@
 			};
 			name = Debug;
 		};
+		5CE86F192F47C33499E0640F54A1023C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7AA2C059A3D595D5CF7A3CCDA00E460 /* SSKeychain-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -804,12 +892,44 @@
 			};
 			name = Release;
 		};
-		75E41EF1B4985BEC52B0222478BD637A /* Release */ = {
+		9F34B68BDDF708831664B6B5F4BC012E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB2062C2060AD096B5822ECD8B3F18D7 /* OMChainKit-Private.xcconfig */;
+			baseConfigurationReference = EADCD930A69B1A552F5C0AC20B206F5C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/OMChainKit/OMChainKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A0611C11E4E34B785C976DF02A03C76A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7AA2C059A3D595D5CF7A3CCDA00E460 /* SSKeychain-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C5B59B38B0420800FA309456863240F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D15DD7ACC6251298257358D79BA630D4 /* KIF-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KIF/KIF-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -820,9 +940,25 @@
 			};
 			name = Release;
 		};
-		F01D9BDBF049DBEE36D2173DA7BD448C /* Debug */ = {
+		C87E885A59B6E2C9A96A0459B7DF354D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB2062C2060AD096B5822ECD8B3F18D7 /* OMChainKit-Private.xcconfig */;
+			baseConfigurationReference = EABE39C90A60D05760A4CBB2EACA699F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FB9BBAE1066F5A8D22F60A916951FF23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 098FAF552509FE9830B12345EB012838 /* OMChainKit-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/OMChainKit/OMChainKit-prefix.pch";
@@ -839,11 +975,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CDF4F6E331D04EC09468D6081EDF063 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		1A7F0AC2FB91E6CAB44E5342F6991C72 /* Build configuration list for PBXNativeTarget "SSKeychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				41ACAF91C8673D423C4F0E34FA04A665 /* Debug */,
-				451911E61974D24796EE6A7BA0ED50A4 /* Release */,
+				A0611C11E4E34B785C976DF02A03C76A /* Debug */,
+				5CE86F192F47C33499E0640F54A1023C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28C5636311B52CBD714F594747C0ED53 /* Build configuration list for PBXNativeTarget "OMChainKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9BBAE1066F5A8D22F60A916951FF23 /* Debug */,
+				22B85A24F58B8F7F3C75792BBA486AA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -857,20 +1002,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57F914B63E724128A991596267DDEFC6 /* Build configuration list for PBXNativeTarget "KIF" */ = {
+		6F136D38BAE5EC9009C7120C0DEC8B4E /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D12F887AEC5A2E88CE4F34FB0D5289F /* Debug */,
-				3A89887E2538547E61DEC32C8A3CE63F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		969691A2036947239ED548CD09E710BE /* Build configuration list for PBXNativeTarget "OMChainKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F01D9BDBF049DBEE36D2173DA7BD448C /* Debug */,
-				75E41EF1B4985BEC52B0222478BD637A /* Release */,
+				9F34B68BDDF708831664B6B5F4BC012E /* Debug */,
+				C87E885A59B6E2C9A96A0459B7DF354D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -880,6 +1016,15 @@
 			buildConfigurations = (
 				3A2227288B64E3D29F20403DB38B0F28 /* Debug */,
 				072C61D5ED24C9F477015BB978D7CF6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBF93446FEFAFD69729D06D00428B8C0 /* Build configuration list for PBXNativeTarget "KIF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D3C93D3080B0E80F873DB6E5E4EC736 /* Debug */,
+				C5B59B38B0420800FA309456863240F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

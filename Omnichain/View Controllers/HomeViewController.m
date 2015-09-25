@@ -8,8 +8,13 @@
 
 #import "HomeViewController.h"
 #import "UIColor+OMCBranding.h"
+#import "AccountManager.h"
+#import <SSKeychain/SSKeychain.h>
 
-@interface HomeViewController ()
+@interface HomeViewController () {
+	UIActivityIndicatorView *_activityIndicatorView;
+	UIView *_grayView;
+}
 
 @end
 
@@ -18,6 +23,33 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	
+	// checks if the user has already signed in AND pressed "Save Password"
+	// takes the user to the wallet view controller if an account was found
+	if ([SSKeychain accountsForService:@"Omnichain"]) {
+		_grayView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+		[_grayView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.5]];
+		
+		_activityIndicatorView = [[UIActivityIndicatorView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+		[_activityIndicatorView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+		[_activityIndicatorView startAnimating];
+		
+		[self.view addSubview:_grayView];
+		[self.view addSubview:_activityIndicatorView];
+		
+		[[AccountManager sharedInstance] loginWithUsername:[[[SSKeychain accountsForService:@"Omnichain"] firstObject] valueForKey:@"acct"]
+												  password:[SSKeychain passwordForService:@"Omnichain" account:[[[SSKeychain accountsForService:@"Omnichain"] firstObject] valueForKey:@"acct"]]
+												   success:^{
+													   [_grayView removeFromSuperview];
+													   [_activityIndicatorView removeFromSuperview];
+													   [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"myWalletVC"] animated:YES completion:nil];
+												   } failure:^(OMChainWallet *wallet, NSString *error) {
+													   // maybe the user changed their password
+													   // and now the keychain is outdated
+													   [_grayView removeFromSuperview];
+													   [_activityIndicatorView removeFromSuperview];
+												   }];
+	}
 	
 	// customizing the buttons
 	signUpButton.layer.cornerRadius = 4;
