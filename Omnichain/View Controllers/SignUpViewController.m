@@ -76,6 +76,7 @@
 }
 
 - (IBAction)signUpButtonTapped:(UIButton *)sender {
+	[sender setEnabled:NO];
 	[self signUp];
 }
 
@@ -94,6 +95,11 @@
 }
 
 - (void)signUp {
+	[signUpButton setTitle:@"" forState:UIControlStateNormal];
+	[signUpButton addSubview:indicator];
+	[indicator setHidesWhenStopped:YES];
+	[indicator startAnimating];
+	
 	if (![passwordTextField.text isEqualToString:confirmPasswordTextField.text]) {
 		// confirmation password and original password don't match
 		UIAlertController *passwordMismatchAlertController = [UIAlertController alertControllerWithTitle:@"Password Mismatch"
@@ -106,17 +112,22 @@
 															  }];
 		[passwordMismatchAlertController addAction:dismissAction];
 		[self presentViewController:passwordMismatchAlertController animated:YES completion:nil];
+		
+		[indicator stopAnimating];
+		[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+		[signUpButton setEnabled:YES];
+		return;
 	}
 	
 	[[AccountManager sharedInstance] signUpWithUsername:usernameTextField.text
 											   password:passwordTextField.text
 												success:^{
-													[indicator stopAnimating];
-													[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
-													
 													[[AccountManager sharedInstance] loginWithUsername:usernameTextField.text
 																							  password:passwordTextField.text
 																							   success:^{
+																								   [indicator stopAnimating];
+																								   [signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+																								   [signUpButton setEnabled:YES];
 																								   
 																								   // Save password alertcontroller
 																								   UIAlertController *savePasswordAlertController = [UIAlertController alertControllerWithTitle:@"Save Password?" message:@"Would you like Omnichain to remember your password?" preferredStyle:UIAlertControllerStyleAlert];
@@ -132,8 +143,11 @@
 																								   [savePasswordAlertController addAction:savePasswordAlertAction];
 																								   
 																								   [self presentViewController:savePasswordAlertController animated:YES completion:nil];
-																								   
 																							   } failure:^(OMChainWallet *wallet, NSString *error) {
+																								   [indicator stopAnimating];
+																								   [signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+																								   [signUpButton setEnabled:YES];
+																								   
 																								   UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Registration Error" message:error preferredStyle:UIAlertControllerStyleAlert];
 																								   UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 																									   [errorController dismissViewControllerAnimated:YES completion:nil];
@@ -144,6 +158,7 @@
 												} failure:^(OMChainWallet *wallet, NSString *error) {
 													[indicator stopAnimating];
 													[signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
+													[signUpButton setEnabled:YES];
 													
 													UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Registration Error" message:error preferredStyle:UIAlertControllerStyleAlert];
 													UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

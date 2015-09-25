@@ -79,6 +79,7 @@
 }
 
 - (IBAction)loginButtonTapped:(UIButton *)sender {
+	[sender setEnabled:NO];
 	[self login];
 }
 
@@ -93,6 +94,7 @@
 											   success:^{
 												   [indicator stopAnimating];
 												   [loginButton setTitle:@"Login" forState:UIControlStateNormal];
+												   [loginButton setEnabled:YES];
 												   
 												   // Save password alertcontroller
 												   UIAlertController *savePasswordAlertController = [UIAlertController alertControllerWithTitle:@"Save Password?" message:@"Would you like Omnichain to remember your password?" preferredStyle:UIAlertControllerStyleAlert];
@@ -108,10 +110,10 @@
 												   [savePasswordAlertController addAction:savePasswordAlertAction];
 												   
 												   [self presentViewController:savePasswordAlertController animated:YES completion:nil];
-												   
 											   } failure:^(OMChainWallet *wallet, NSString *error) {
 												   [indicator stopAnimating];
 												   [loginButton setTitle:@"Login" forState:UIControlStateNormal];
+												   [loginButton setEnabled:YES];
 												   
 												   UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Sign In Error" message:error preferredStyle:UIAlertControllerStyleAlert];
 												   UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
