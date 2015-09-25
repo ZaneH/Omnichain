@@ -4,4 +4,4 @@ before_install:
   - brew update
   - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
 script:
-  xctool -project Omnichain.xcodeproj -scheme UI\ Tests -sdk iphonesimulator build test -freshInstall -freshSimulator
+  xctool -workspace Omnichain.xcworkspace -scheme UI\ Tests -sdk iphonesimulator build test -freshInstall -freshSimulator
