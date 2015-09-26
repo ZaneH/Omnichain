@@ -1,4 +1,4 @@
-# Omnichain <img src="https://travis-ci.org/ZaneH/Omnichain.svg" />
+# Omnichain
 The first Omnicoin wallet for iOS.
 
 Makes use of http://www.github.com/ZaneH/OMChainKit (documented)

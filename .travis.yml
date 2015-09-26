@@ -1,7 +1,0 @@
-language: objective-c
-before_install:
-  - sudo gem install cocoapods
-  - brew update
-  - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
-script:
-  xctool -workspace Omnichain.xcworkspace -scheme UI\ Tests -sdk iphonesimulator build test -freshInstall -freshSimulator
