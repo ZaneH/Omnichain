@@ -20,6 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[[UITextField appearance] setTintColor:[UIColor mainPurpleColor]];
 	[[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:18.0f]}];
+	[SSKeychain deletePasswordForService:@"Omnichain" account:[[[SSKeychain accountsForService:@"Omnichain"] objectAtIndex:0] valueForKey:@"acct"]];
 	return YES;
 }
 

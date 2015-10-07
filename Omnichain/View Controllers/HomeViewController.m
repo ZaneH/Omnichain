@@ -43,7 +43,8 @@
 													   [_activityIndicatorView stopAnimating];
 													   [_grayView removeFromSuperview];
 													   [_activityIndicatorView removeFromSuperview];
-													   [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"myWalletVC"] animated:YES completion:nil];
+													   UIViewController *walletVC = [self.storyboard instantiateViewControllerWithIdentifier:@"myWalletVC"];
+													   [self presentViewController:walletVC animated:YES completion:nil];
 												   } failure:^(OMChainWallet *wallet, NSString *error) {
 													   // maybe the user changed their password
 													   // and now the keychain is outdated

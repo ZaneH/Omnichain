@@ -47,17 +47,6 @@
 	if (self) {
 		self.username = username;
 		self.passwordHash = [self createSHA512WithString:password];
-		_timeOutInterval = 60;
-	}
-	return self;
-}
-
-- (instancetype)init {
-	self = [super init];
-	if (self) {
-		self.username = @"";
-		self.passwordHash = @"";
-		self.emailAddress = @"";
 		self.transactions = [NSMutableArray new];
 		self.addresses = [NSMutableArray new];
 		self.transactionsIn = 0;
@@ -327,35 +316,41 @@
 				if (_failedBlock) _failedBlock(self, [jsonObject valueForKey:@"error_info"]);
 				return;
 			}
-			self.emailAddress = [jsonObject valueForKey:@"email"];
 			
-			self.transactionsOut = [[jsonObject valueForKey:@"tx_out"] integerValue];
-			self.totalOut = [[jsonObject valueForKey:@"total_out"] doubleValue];
+			NSDictionary *response = [jsonObject valueForKey:@"response"];
 			
-			self.transactionsIn = [[jsonObject valueForKey:@"tx_in"] integerValue];
-			self.totalIn = [[jsonObject valueForKey:@"total_in"] doubleValue];
+			self.emailAddress = [response valueForKey:@"email"];
 			
-			self.balance = [[jsonObject valueForKey:@"balance"] doubleValue];
-			self.pendingBalance = [[jsonObject valueForKey:@"pending_balance"] doubleValue];
+			self.transactionsOut = [[response valueForKey:@"tx_out"] integerValue];
+			self.totalOut = [[response valueForKey:@"total_out"] doubleValue];
 			
-			for (int transactionIndex = 0; transactionIndex < [[jsonObject valueForKey:@"transactions"] count]; transactionIndex++) {
+			self.transactionsIn = [[response valueForKey:@"tx_in"] integerValue];
+			self.totalIn = [[response valueForKey:@"total_in"] doubleValue];
+			
+			self.balance = [[response valueForKey:@"balance"] doubleValue];
+			self.pendingBalance = [[response valueForKey:@"pending_balance"] doubleValue];
+			
+			for (int transactionIndex = 0; transactionIndex < [[response valueForKey:@"transactions"] count]; transactionIndex++) {
 				OMChainTransaction *newTransaction = [[OMChainTransaction alloc] init];
-				newTransaction.date = [[[[jsonObject valueForKey:@"transactions"] objectAtIndex:transactionIndex] valueForKey:@"date"] stringValue];
-				newTransaction.confirmations = [[[[jsonObject valueForKey:@"transactions"] objectAtIndex:transactionIndex] valueForKey:@"confirmations"] integerValue];
-				newTransaction.transactionHash = [[[[jsonObject valueForKey:@"transactions"] objectAtIndex:transactionIndex] valueForKey:@"tx_hash"] stringValue];
-				newTransaction.valueOfTransaction = [[[[jsonObject valueForKey:@"transactions"] objectAtIndex:transactionIndex] valueForKey:@"value"] integerValue];
-				newTransaction.balance = [[[[jsonObject valueForKey:@"transactions"] objectAtIndex:transactionIndex] valueForKey:@"balance"] integerValue];
+				newTransaction.date = [[[response valueForKey:@"transactions"] objectAtIndex:transactionIndex] valueForKey:@"date"];
+				newTransaction.confirmations = [[[[response valueForKey:@"transactions"] objectAtIndex:transactionIndex] valueForKey:@"confirmations"] integerValue];
+				newTransaction.transactionHash = [[[response valueForKey:@"transactions"] objectAtIndex:transactionIndex] valueForKey:@"tx_hash"];
+				newTransaction.valueOfTransaction = [[[[response valueForKey:@"transactions"] objectAtIndex:transactionIndex] valueForKey:@"value"] doubleValue];
+				newTransaction.balance = [[[[response valueForKey:@"transactions"] objectAtIndex:transactionIndex] valueForKey:@"balance"] doubleValue];
 				
 				[self.transactions insertObject:newTransaction atIndex:0];
 			}
 			
-			for (int addressIndex = 0; addressIndex < [[jsonObject valueForKey:@"addresses"] count]; addressIndex++) {
+			NSArray *addressesArray = [response valueForKey:@"addresses"];
+			for (int addressIndex = 0; addressIndex < [addressesArray count]; addressIndex++) {
 				OMChainAddress *newAddress = [[OMChainAddress alloc] init];
-				newAddress.address = [[[[jsonObject valueForKey:@"addresses"] objectAtIndex:addressIndex] valueForKey:@"address"] stringValue];
-				newAddress.privateKey = [[[[jsonObject valueForKey:@"addresses"] objectAtIndex:addressIndex] valueForKey:@"private_key"] stringValue];
+				newAddress.address = [[[response valueForKey:@"addresses"] objectAtIndex:addressIndex] valueForKey:@"address"];
+				newAddress.privateKey = [[[response valueForKey:@"addresses"] objectAtIndex:addressIndex] valueForKey:@"private_key"];
+				
+				[self.addresses insertObject:newAddress atIndex:0];
 			}
 			
-			self.omcUSDValue = [[jsonObject valueForKey:@"omc_usd_price"] doubleValue];
+			self.omcUSDValue = [[response valueForKey:@"omc_usd_price"] doubleValue];
 		} else {
 			if (_failedBlock) _failedBlock(self, @"API_CHANGED");
 			[self.delegate omnichainFailedWithWallet:self error:@"wallet_getinfo"];

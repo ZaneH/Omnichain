@@ -67,7 +67,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.061700932681560516" green="0.089527301490306854" blue="0.12692910432815552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.067466288805007935" green="0.089359872043132782" blue="0.12757521867752075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="biw-Ay-pBx" firstAttribute="top" secondItem="8Vl-Zo-ErK" secondAttribute="bottom" constant="8" id="5pD-gA-ekO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2ze-2q-Ri1" secondAttribute="trailing" id="6wH-Zu-WeJ"/>
@@ -145,7 +145,7 @@
                             </textField>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.042145900428295135" green="0.070283941924571991" blue="0.091132663190364838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.067466288805007935" green="0.089359872043132782" blue="0.12757521867752075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lgI-qG-MJ3" firstAttribute="top" secondItem="9Zx-3Y-rOI" secondAttribute="bottom" constant="8" id="2vI-NK-SKX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i0R-JZ-xfs" secondAttribute="trailing" id="CmA-Nn-ibD"/>
@@ -172,7 +172,6 @@
         <!--Wallet View Controller-->
         <scene sceneID="d0G-kg-4c6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1o9-U9-rIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="myWalletVC" id="Rgt-Rk-r9D" customClass="WalletViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X5H-HI-d25"/>
@@ -182,30 +181,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="DRJ-50-Cgf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="LWq-Qf-lWL">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="transactionCell" rowHeight="92" id="U6Y-lZ-MeR">
+                                        <rect key="frame" x="0.0" y="50" width="600" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U6Y-lZ-MeR" id="JPz-cn-cdr">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirmed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoU-wv-0kY">
+                                                    <rect key="frame" x="8" y="8" width="143" height="21"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" red="0.30980392159999998" green="0.23137254900000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <real key="value" value="10.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.067466288805007935" green="0.089359872043132782" blue="0.12757521867752075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="6qk-r8-ty2">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <animations/>
                                 <items>
-                                    <navigationItem title="My Wallet" id="55E-qF-76T"/>
+                                    <navigationItem id="vLv-yz-83w">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="7l3-eL-HW1">
+                                            <rect key="frame" x="160" y="7" width="281" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Confirmed"/>
+                                                <segment title="Unconfirmed"/>
+                                            </segments>
+                                        </segmentedControl>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mh5-Hj-w6t"/>
+                                    </navigationItem>
                                 </items>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="barPosition">
-                                        <integer key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </navigationBar>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.043137254899999998" green="0.058823529409999999" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.067466288805007935" green="0.089359872043132782" blue="0.12757521867752075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DRJ-50-Cgf" firstAttribute="leading" secondItem="0Z7-ny-Rgv" secondAttribute="leadingMargin" constant="-20" id="Bo7-bg-aVs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DRJ-50-Cgf" secondAttribute="trailing" constant="-20" id="I2F-WX-fA5"/>
-                            <constraint firstItem="DRJ-50-Cgf" firstAttribute="top" secondItem="X5H-HI-d25" secondAttribute="bottom" id="SGv-vg-o2K"/>
+                            <constraint firstItem="6qk-r8-ty2" firstAttribute="leading" secondItem="0Z7-ny-Rgv" secondAttribute="leadingMargin" constant="-20" id="FgL-lc-j6S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6qk-r8-ty2" secondAttribute="trailing" constant="-20" id="KbX-oG-sCl"/>
+                            <constraint firstItem="6qk-r8-ty2" firstAttribute="top" secondItem="X5H-HI-d25" secondAttribute="bottom" id="VGI-En-SVs"/>
+                            <constraint firstItem="cSc-EB-eX6" firstAttribute="top" secondItem="LWq-Qf-lWL" secondAttribute="bottom" id="jNT-ts-2g5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LWq-Qf-lWL" secondAttribute="trailing" constant="-20" id="tg4-VU-ltr"/>
+                            <constraint firstItem="LWq-Qf-lWL" firstAttribute="leading" secondItem="0Z7-ny-Rgv" secondAttribute="leadingMargin" constant="-20" id="vYc-tX-5Gh"/>
+                            <constraint firstItem="LWq-Qf-lWL" firstAttribute="top" secondItem="X5H-HI-d25" secondAttribute="bottom" constant="44" id="wCh-BI-Vel"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="transactionsTableView" destination="LWq-Qf-lWL" id="Ehc-9E-IPa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1o9-U9-rIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2970" y="477"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jdo-7t-mWI">
+            <objects>
+                <viewController id="9fC-kW-Goy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IeD-y5-e3g"/>
+                        <viewControllerLayoutGuide type="bottom" id="u4M-jC-nYR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3H4-TH-Nnc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="1PC-ve-BSR">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AIb-Ph-jI7"/>
+                                    <barButtonItem title="Open in Safari" id="Ni4-Wy-fFo"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="44V-ZJ-VgQ"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.067466288805007935" green="0.089359872043132782" blue="0.12757521867752075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1PC-ve-BSR" secondAttribute="trailing" constant="-20" id="2e6-x9-aKS"/>
+                            <constraint firstItem="1PC-ve-BSR" firstAttribute="leading" secondItem="3H4-TH-Nnc" secondAttribute="leadingMargin" constant="-20" id="UgS-5Q-KbH"/>
+                            <constraint firstItem="u4M-jC-nYR" firstAttribute="top" secondItem="1PC-ve-BSR" secondAttribute="bottom" id="clA-MN-gJE"/>
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwu-o3-Tfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2970" y="477"/>
+            <point key="canvasLocation" x="3666" y="477"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ufU-Yz-3Ie">
@@ -216,6 +299,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.043137254899999998" green="0.058823529409999999" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Settings" id="rkd-Lh-gVO">
                                 <cells>
@@ -240,7 +324,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ze-hU-6yA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3707" y="477"/>
+            <point key="canvasLocation" x="2970" y="1189"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Ia3-Vg-WQv">
@@ -298,21 +382,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="By registering you agree to Omnicha.in's Terms of Service" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EZG-3o-tUT">
+                                <rect key="frame" x="20" y="303" width="560" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nZ5-2m-4jg"/>
+                                </constraints>
+                                <color key="textColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.042145900428295135" green="0.070283941924571991" blue="0.091132663190364838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.067466288805007935" green="0.089359872043132782" blue="0.12757521867752075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Jlu-8v-g2L" secondAttribute="trailing" id="1hK-vb-1eT"/>
                             <constraint firstItem="IhU-Bw-mcB" firstAttribute="top" secondItem="Jlu-8v-g2L" secondAttribute="bottom" constant="32" id="587-0U-lk8"/>
                             <constraint firstItem="Jlu-8v-g2L" firstAttribute="top" secondItem="I7b-b8-Z49" secondAttribute="bottom" constant="8" id="EpR-EV-JY2"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Jlu-8v-g2L" secondAttribute="leading" id="KvB-Bu-7ua"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xNF-Hi-5nM" secondAttribute="trailing" id="LdO-EG-9sN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EZG-3o-tUT" secondAttribute="trailing" id="ViA-G8-QWG"/>
                             <constraint firstItem="I7b-b8-Z49" firstAttribute="top" secondItem="xNF-Hi-5nM" secondAttribute="bottom" constant="8" id="bjm-qi-4VC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I7b-b8-Z49" secondAttribute="trailing" id="gX2-wY-ocH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IhU-Bw-mcB" secondAttribute="trailing" id="ioC-ah-Ypi"/>
                             <constraint firstAttribute="leadingMargin" secondItem="I7b-b8-Z49" secondAttribute="leading" id="iz9-Dm-M5D"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="EZG-3o-tUT" secondAttribute="leading" id="jsg-yH-AlV"/>
                             <constraint firstAttribute="leadingMargin" secondItem="IhU-Bw-mcB" secondAttribute="leading" id="l53-zZ-o2o"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xNF-Hi-5nM" secondAttribute="leading" id="xp3-Cu-a5r"/>
+                            <constraint firstItem="EZG-3o-tUT" firstAttribute="top" secondItem="IhU-Bw-mcB" secondAttribute="bottom" constant="8" id="zbc-Hn-M7E"/>
                             <constraint firstItem="xNF-Hi-5nM" firstAttribute="top" secondItem="N8C-90-eiP" secondAttribute="bottom" constant="8" id="zgG-4u-TcR"/>
                         </constraints>
                     </view>
@@ -320,6 +417,7 @@
                         <outlet property="confirmPasswordTextField" destination="Jlu-8v-g2L" id="wD7-u9-LuK"/>
                         <outlet property="passwordTextField" destination="I7b-b8-Z49" id="PvD-bS-yLM"/>
                         <outlet property="signUpButton" destination="IhU-Bw-mcB" id="yqb-um-2uQ"/>
+                        <outlet property="termsOfServiceTextView" destination="EZG-3o-tUT" id="Sll-0O-9jZ"/>
                         <outlet property="usernameTextField" destination="xNF-Hi-5nM" id="yhl-aZ-yBs"/>
                         <segue destination="Rgt-Rk-r9D" kind="showDetail" identifier="toWalletVC" id="stN-D1-6M7"/>
                     </connections>
@@ -354,4 +452,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="stN-D1-6M7"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

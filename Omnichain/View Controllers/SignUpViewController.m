@@ -18,7 +18,7 @@
 @end
 
 @implementation SignUpViewController
-@synthesize usernameTextField, passwordTextField, confirmPasswordTextField, signUpButton;
+@synthesize usernameTextField, passwordTextField, confirmPasswordTextField, signUpButton, termsOfServiceTextView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -73,6 +73,17 @@
 	// setup loading indicator
 	indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 	[indicator setFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2 - 30, 5, 30, 30)];
+	
+	// setup the terms of service textview
+	NSMutableAttributedString *termsOfServiceAttributedString = [[NSMutableAttributedString alloc] initWithString:@"By registering you agree to Omnicha.in's Terms of Service"];
+	[termsOfServiceAttributedString addAttribute:NSLinkAttributeName value:@"https://omnicha.in/wallet/tos" range:NSMakeRange(28, 29)];
+	[termsOfServiceAttributedString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(28, 29)];
+	[termsOfServiceTextView setAttributedText:termsOfServiceAttributedString];
+	[termsOfServiceTextView setLinkTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+													NSUnderlineColorAttributeName: [UIColor whiteColor]}];
+	[termsOfServiceTextView setTextColor:[UIColor whiteColor]];
+	[termsOfServiceTextView setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:18.0f]];
+	[termsOfServiceTextView setTextAlignment:NSTextAlignmentCenter];
 }
 
 - (IBAction)signUpButtonTapped:(UIButton *)sender {

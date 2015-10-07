@@ -25,7 +25,7 @@
 /**
  *  Value of the transaction in OMC
  */
-@property (nonatomic) NSInteger valueOfTransaction;
+@property (nonatomic) double valueOfTransaction;
 /**
  *  Account balance after transaction in OMC
  */
