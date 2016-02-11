@@ -1,3 +1,5 @@
+<h1>Omnicoin has died, this project will remain in this state.</h1>
+
 # Omnichain
 The first Omnicoin wallet for iOS.
 
