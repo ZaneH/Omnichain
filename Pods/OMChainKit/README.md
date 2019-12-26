@@ -24,7 +24,7 @@ OMChainWallet *wallet = [[OMChainWallet alloc] initWithUsername:@"username" pass
 ```
 From there you can send whatever messages you need to your newly created `wallet` object. Make sure your `wallet` object is initialized with a username and password before you start sending `wallet_*` messages; not doing so will result in a crash. To avoid this, put all the code you want to run inside the `success block`.
 
-##Example
+## Example
 In this example, I will sign into a fake account and change its email address:
 ```objc
 OMChainWallet *exampleWallet = [[OMChainWallet alloc] initWithUsername:@"username" password:@"password" success:^(OMChainWallet *wallet) {
